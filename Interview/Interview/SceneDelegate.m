@@ -7,6 +7,7 @@
 //
 
 #import "SceneDelegate.h"
+#import "HomeViewController.h"
 
 @interface SceneDelegate ()
 
@@ -16,7 +17,12 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    
+    //2020年05月06日15:42:30
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.windowScene = (UIWindowScene*)scene;
+    UINavigationController* rootNavgationController = [[UINavigationController alloc] initWithRootViewController:[HomeViewController new]];
+    self.window.rootViewController = rootNavgationController;
+    [self.window makeKeyAndVisible];   
 }
 
 

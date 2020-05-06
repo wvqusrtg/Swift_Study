@@ -16,6 +16,7 @@
 		8C96CD8B246298E000A420F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CD8A246298E000A420F6 /* main.m */; };
 		8C96CD95246298E100A420F6 /* InterviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CD94246298E100A420F6 /* InterviewTests.m */; };
 		8C96CDA0246298E100A420F6 /* InterviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CD9F246298E100A420F6 /* InterviewUITests.m */; };
+		8C96CDB02462A25400A420F6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDAF2462A25400A420F6 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		8C96CD9B246298E100A420F6 /* InterviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C96CD9F246298E100A420F6 /* InterviewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterviewUITests.m; sourceTree = "<group>"; };
 		8C96CDA1246298E100A420F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C96CDAE2462A25400A420F6 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8C96CDAF2462A25400A420F6 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		8C96CD77246298DF00A420F6 /* Interview */ = {
 			isa = PBXGroup;
 			children = (
+				8C96CDAD2462A24100A420F6 /* Home */,
 				8C96CD78246298DF00A420F6 /* AppDelegate.h */,
 				8C96CD79246298DF00A420F6 /* AppDelegate.m */,
 				8C96CD7B246298DF00A420F6 /* SceneDelegate.h */,
@@ -135,6 +139,15 @@
 				8C96CDA1246298E100A420F6 /* Info.plist */,
 			);
 			path = InterviewUITests;
+			sourceTree = "<group>";
+		};
+		8C96CDAD2462A24100A420F6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8C96CDAE2462A25400A420F6 /* HomeViewController.h */,
+				8C96CDAF2462A25400A420F6 /* HomeViewController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +283,7 @@
 				8C96CD80246298DF00A420F6 /* ViewController.m in Sources */,
 				8C96CD7A246298DF00A420F6 /* AppDelegate.m in Sources */,
 				8C96CD8B246298E000A420F6 /* main.m in Sources */,
+				8C96CDB02462A25400A420F6 /* HomeViewController.m in Sources */,
 				8C96CD7D246298DF00A420F6 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJFH7WE6F4;
 				INFOPLIST_FILE = Interview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJFH7WE6F4;
 				INFOPLIST_FILE = Interview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

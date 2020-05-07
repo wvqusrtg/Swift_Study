@@ -54,6 +54,9 @@ class HomeTableTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //cell选择动作取消
+        tableView.deselectRow(at: indexPath, animated: true)
+        //打印点击行
         print("---Section:\(indexPath.section) ---row:\(indexPath.row)")
     }
     

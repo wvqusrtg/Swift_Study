@@ -1,9 +1,8 @@
 # OCInterview
 OC interview summary
-
-
-https://wap5.test.citicbank.com
-https://202.108.57.75
-https://202.108.57.75/CyberpayFOServer
-https://wap5.test.citicbank.com/CyberpayFOServer
-
+2020年05月07日
+4.Sketch 结合 App Icon Gear绘制图标更新(感觉图标还是得再更新不太好看-文字边框改为了白色，其他渐变)
+2020年05月06日
+3.Swift项目 SceneDelegate非Storyboard方式启动
+2.Object-C项目、Swift 项目 iOS 13 SceneDelegae适配-纯代码
+1.Xcode Version 11.4.1新建Swift项目

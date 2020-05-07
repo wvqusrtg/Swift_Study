@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.frame = UIScreen.main.bounds
             //window?.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
             //如下不用Storyboard方式 by:nixs 2020年05月06日16:17:03
-            window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
+            //window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
+            window?.rootViewController = UINavigationController(rootViewController: HomeTableTableViewController())
             window?.makeKeyAndVisible()
         }
         return true

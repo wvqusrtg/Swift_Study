@@ -7,6 +7,8 @@ OC interview summary
 ---
 ```
 2020年05月07日
+6.表格布局简单初步尝试
+5.引入cocopods / pod 'SnapKit'
 4.Sketch 结合 App Icon Gear绘制图标更新(感觉图标还是得再更新不太好看-文字边框改为了白色，其他渐变)
 ```
 ---

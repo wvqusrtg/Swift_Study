@@ -1,0 +1,142 @@
+
+struct FixedLengthRange {
+    var firstValue: Int
+    let length: Int
+}
+var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
+// 该区间表示整数 0，1，2
+print("rangeOfThreeItems's firestValue is \(rangeOfThreeItems.firstValue)")
+print("rangeOfThreeItems's length is \(rangeOfThreeItems.length)")
+rangeOfThreeItems.firstValue = 6
+// 该区间现在表示整数 6，7，8
+print(rangeOfThreeItems.firstValue)
+
+let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
+// 该区间表示整数 0，1，2，3
+//rangeOfFourItems.firstValue = 6
+// 尽管 firstValue 是个可变属性，但这里还是会报错
+class DataImporter {
+    /*
+    DataImporter 是一个负责将外部文件中的数据导入的类。
+    这个类的初始化会消耗不少时间。
+    */
+    var fileName = "data.txt"
+    // 这里会提供数据导入功能
+}
+
+class DataManager {
+    lazy var importer = DataImporter()
+    var data = [String]()
+    // 这里会提供数据管理功能
+}
+
+let manager = DataManager()
+manager.data.append("Some data")
+manager.data.append("Some more data")
+// DataImporter 实例的 importer 属性还没有被创建
+print(manager.importer.fileName)
+struct Point {
+    var x = 0.0, y = 0.0
+}
+struct Size {
+    var width = 0.0, height = 0.0
+}
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Point(x: centerX, y: centerY)
+        }
+        set(newCenter) {
+            origin.x = newCenter.x - (size.width / 2)
+            origin.y = newCenter.y - (size.height / 2)
+        }
+    }
+}
+var square = Rect(origin: Point(x: 0.0, y: 0.0),
+    size: Size(width: 10.0, height: 10.0))
+let initialSquareCenter = square.center
+square.center = Point(x: 15.0, y: 15.0)
+print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
+// 打印“square.origin is now at (10.0, 10.0)”
+
+var square2 = Rect(origin: Point(x: 0.0, y: 0.0), size: Size(width: 10.0, height: 10.0))
+square2.center = Point(x: 15.0, y: 15.0)
+
+print("-------------------------------")
+
+class StepCounter {
+    var totalSteps:Int = 0{
+        willSet(newTotalSteps){
+            print("将 totalSteps 的值设置为\(newTotalSteps)")
+        }
+        didSet{
+            if totalSteps > oldValue {
+                print("增加了 \(totalSteps - oldValue)步")
+            }
+        }
+    }
+}
+
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+// 将 totalSteps 的值设置为 200
+// 增加了 200 步
+stepCounter.totalSteps = 360
+// 将 totalSteps 的值设置为 360
+// 增加了 160 步
+stepCounter.totalSteps = 896
+// 将 totalSteps 的值设置为 896
+// 增加了 536 步
+
+@propertyWrapper
+struct TwelveOrLess {
+    private var number: Int
+    init() { self.number = 0 }
+    var wrappedValue: Int {
+        get { return number }
+        set { number = min(newValue, 12) }
+    }
+}
+
+struct SmallRectangle {
+    @TwelveOrLess var height: Int
+    @TwelveOrLess var width: Int
+}
+
+@propertyWrapper
+struct SmallNumber {
+    private var number: Int
+    var projectedValue: Bool
+    init() {
+        self.number = 0
+        self.projectedValue = false
+    }
+    var wrappedValue: Int {
+        get { return number }
+        set {
+            if newValue > 12 {
+                number = 12
+                projectedValue = true
+            } else {
+                number = newValue
+                projectedValue = false
+            }
+        }
+    }
+}
+struct SomeStructure {
+    @SmallNumber var someNumber: Int
+}
+var someStructure = SomeStructure()
+
+someStructure.someNumber = 4
+print(someStructure.$someNumber)
+// 打印 "false"
+
+someStructure.someNumber = 55
+print(someStructure.$someNumber)
+// 打印 "true"

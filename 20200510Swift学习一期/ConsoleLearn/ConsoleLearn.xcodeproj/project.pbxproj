@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		594642CE246CD5000015B6D4 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594642CD246CD5000015B6D4 /* Counter.swift */; };
+		594642D0246CD7840015B6D4 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594642CF246CD7840015B6D4 /* Point.swift */; };
+		594642D2246CEA3A0015B6D4 /* SomeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594642D1246CEA3A0015B6D4 /* SomeClass.swift */; };
 		8CAF1716246A38600071F8F2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF1715246A38600071F8F2 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		594642CD246CD5000015B6D4 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		594642CF246CD7840015B6D4 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		594642D1246CEA3A0015B6D4 /* SomeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeClass.swift; sourceTree = "<group>"; };
 		8CAF1712246A38600071F8F2 /* ConsoleLearn */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ConsoleLearn; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAF1715246A38600071F8F2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +65,8 @@
 			children = (
 				8CAF1715246A38600071F8F2 /* main.swift */,
 				594642CD246CD5000015B6D4 /* Counter.swift */,
+				594642CF246CD7840015B6D4 /* Point.swift */,
+				594642D1246CEA3A0015B6D4 /* SomeClass.swift */,
 			);
 			path = ConsoleLearn;
 			sourceTree = "<group>";
@@ -123,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594642D2246CEA3A0015B6D4 /* SomeClass.swift in Sources */,
 				594642CE246CD5000015B6D4 /* Counter.swift in Sources */,
+				594642D0246CD7840015B6D4 /* Point.swift in Sources */,
 				8CAF1716246A38600071F8F2 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

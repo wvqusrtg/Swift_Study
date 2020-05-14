@@ -1,0 +1,18 @@
+print(descLab)
+struct TimesTable {
+    let multiplier: Int
+    subscript(index: Int) -> Int {
+        return multiplier * index
+    }
+}
+let threeTimesTable = TimesTable(multiplier: 3)
+print("six times three is \(threeTimesTable[6])")
+// 打印“six times three is 18”ss
+
+var numberOflegs = ["spider":8,"ant":6,"cat":4]
+print("spider have \(numberOflegs["spider"] ?? 0) legs")
+print("spider have \(numberOflegs["spiders"] ?? 88) legs")
+
+//class SomeClass: SomeSuperClass {
+//    //这里是子类的定义
+//}

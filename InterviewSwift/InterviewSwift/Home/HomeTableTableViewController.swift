@@ -15,7 +15,7 @@ class HomeTableTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.title = "首页-Swift"
+        self.navigationItem.title = "HomeTableTableViewController"
         data.append(["宋茜","美食玩出新花样，好吃也要颜值在线！轩尼诗干邑特饮搭配酥脆大虾，你馋了吗？戳这里了解一下同款搭配哦！"])
         data.append(["吃喝实验室","​​每当夏季来临，烧烤作为大排挡的必选美食，用它那独有的芬芳占据着每一个吃货的味蕾，让辛苦一天的人儿能够在美食当中，放飞自我。"])
         data.append(["姚晨","上个月回了趟家，担任了“福建省旅游形象大使”。从今往后，将持续为家乡美景美食打call。跟姐来，带你坐上“全福游”，好吃好玩没理由！"])
@@ -28,6 +28,19 @@ class HomeTableTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+        var welcome = "hello"
+        welcome.insert("#", at: welcome.endIndex)
+        welcome.insert(contentsOf:" 倪新生", at: welcome.index(before: welcome.endIndex))
+        print(welcome)
+        welcome.insert(contentsOf:"韩露", at: welcome.index(after: welcome.startIndex))
+        print(welcome)
+        welcome.insert(contentsOf:"倪新伟", at: welcome.startIndex)
+        print(welcome)
+        welcome.insert(contentsOf:"珂珂", at: welcome.endIndex)
+        print(welcome)
+        
     }
 
     // MARK: - Table view data source
@@ -58,6 +71,12 @@ class HomeTableTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         //打印点击行
         print("---Section:\(indexPath.section) ---row:\(indexPath.row)")
+        pushVC(indexpath: indexPath)
+    }
+    
+    private func pushVC(indexpath:IndexPath) {
+        self.navigationController?.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(HomeViewController(), animated: true)
     }
     
     /*

@@ -531,6 +531,7 @@
 			baseConfigurationReference = BED0B53D859C8628A1D4C7CA /* Pods-InterviewSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJFH7WE6F4;
 				ENABLE_BITCODE = NO;
@@ -552,6 +553,7 @@
 			baseConfigurationReference = 24673153372F5811824E084E /* Pods-InterviewSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJFH7WE6F4;
 				ENABLE_BITCODE = NO;

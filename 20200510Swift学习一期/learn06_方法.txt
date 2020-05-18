@@ -1,0 +1,40 @@
+let descLab = """
+方法
+    类、结构体、枚举-都可以定义实例方法/定义类型方法
+实例方法
+    
+"""
+print(descLab)
+
+
+let counter = Counter()
+// 初始计数值是0
+print(counter.count)
+counter.increment()
+// 计数值现在是1
+print(counter.count)
+counter.increment(by: 5)
+// 计数值现在是6
+print(counter.count)
+counter.reset()
+// 计数值现在是0
+print(counter.count)
+
+var somePoint = Point(x: 1.0,y: 1.0)
+somePoint.moveBy(x: 2.0, y: 2.0)
+print("the point is now at (\(somePoint.x),\(somePoint.y))")
+
+//三态开关
+var ovenLight = TriStateSwitch.low
+print(ovenLight)
+
+ovenLight.next()
+print(ovenLight)
+
+ovenLight.next()
+print(ovenLight)
+
+print("类型方法和实例方法一样用点语法调用。但是，你是在类型上调用这个方法，而不是在实例上调用。")
+SomeClass.someTypeMethod()
+print(SomeClass.init().name)
+print(SomeClass().name)

@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5919744124766995009FC662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5919744024766995009FC662 /* AppDelegate.swift */; };
 		5919744324766995009FC662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5919744224766995009FC662 /* SceneDelegate.swift */; };
-		5919744524766995009FC662 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5919744424766995009FC662 /* ContentView.swift */; };
 		591974472476699B009FC662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591974462476699B009FC662 /* Assets.xcassets */; };
 		5919744A2476699B009FC662 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591974492476699B009FC662 /* Preview Assets.xcassets */; };
 		5919744D2476699B009FC662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5919744B2476699B009FC662 /* LaunchScreen.storyboard */; };
+		5957BA4924767233003E0BE1 /* AwesomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5957BA4824767233003E0BE1 /* AwesomeView.swift */; };
+		5957BA4B24767413003E0BE1 /* SwiftUIView_Test01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5957BA4A24767413003E0BE1 /* SwiftUIView_Test01.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5919743D24766995009FC662 /* SwiftUI01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI01.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5919744024766995009FC662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5919744224766995009FC662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5919744424766995009FC662 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		591974462476699B009FC662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		591974492476699B009FC662 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5919744C2476699B009FC662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5919744E2476699B009FC662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5957BA4824767233003E0BE1 /* AwesomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeView.swift; sourceTree = "<group>"; };
+		5957BA4A24767413003E0BE1 /* SwiftUIView_Test01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView_Test01.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +56,9 @@
 		5919743F24766995009FC662 /* SwiftUI01 */ = {
 			isa = PBXGroup;
 			children = (
-				5919744024766995009FC662 /* AppDelegate.swift */,
 				5919744224766995009FC662 /* SceneDelegate.swift */,
-				5919744424766995009FC662 /* ContentView.swift */,
+				5957BA4824767233003E0BE1 /* AwesomeView.swift */,
+				5957BA4A24767413003E0BE1 /* SwiftUIView_Test01.swift */,
 				591974462476699B009FC662 /* Assets.xcassets */,
 				5919744B2476699B009FC662 /* LaunchScreen.storyboard */,
 				5919744E2476699B009FC662 /* Info.plist */,
@@ -146,9 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5919744124766995009FC662 /* AppDelegate.swift in Sources */,
+				5957BA4924767233003E0BE1 /* AwesomeView.swift in Sources */,
 				5919744324766995009FC662 /* SceneDelegate.swift in Sources */,
-				5919744524766995009FC662 /* ContentView.swift in Sources */,
+				5957BA4B24767413003E0BE1 /* SwiftUIView_Test01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

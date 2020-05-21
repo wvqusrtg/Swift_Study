@@ -9,7 +9,11 @@ OC interview summary
 ---
 
 2020年05月21日
+
+11.[二、(翻译) SwiftUI - 理解 State](https://www.jianshu.com/p/aace56356aa7)
+
 10.[一、(翻译) SwiftUI - 怎样去开始一个新项目](https://www.jianshu.com/p/3828c5a5ba92)
+
 9.[Swift 5.1 极简参考手册](https://blog.csdn.net/zsxjtip/article/details/104155074?ops_request_misc=&request_id=&biz_id=102&utm_term=swift5.1&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-104155074) 
 ```    
 2020年05月14日

@@ -5,15 +5,20 @@ OC interview summary
 ![](./Res/20200507Sketch绘制图标/Swift_Small.png)
 
 ---
+```
+```
+
+---
+
+2020年05月21日
+
+9.[Swift 5.1 极简参考手册](https://blog.csdn.net/zsxjtip/article/details/104155074?ops_request_misc=&request_id=&biz_id=102&utm_term=swift5.1&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-104155074) 
 ```    
 2020年05月14日
 8.Swift 教程：https://swiftgg.gitbook.io/swift/swift-jiao-cheng
     「Playground编写测试代码有些提示不支持-还是改用Xcode吧！」
-<<<<<<< HEAD
     1.基础部分
-=======
     20200510Swift学习一期「留存」
->>>>>>> acf051146ce348d28bf0f53cff400ee01192a92c
 ```
 ---
 ```

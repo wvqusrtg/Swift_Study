@@ -22,13 +22,16 @@ struct ContentView: View {
         Pokemon(id: 3, name: "Pikachu", type: "Electric", color: .yellow),
     ]
     @State var showDetails = true
+    
     var body: some View {
         NavigationView{
             List(pokemonList) { pokemon in
-              HStack {
-                Text(pokemon.name)
-                Text(pokemon.type).foregroundColor(pokemon.color)
-              }
+                NavigationLink(destination: PokemonDetail(pokemon: pokemon)){
+                    HStack {
+                      Text(pokemon.name)
+                      Text(pokemon.type).foregroundColor(pokemon.color)
+                    }
+                }
             }.navigationBarTitle(Text("Pokemon"))
             .navigationBarItems(
                 leading: ToggleTextButton(isOn: $showDetails),

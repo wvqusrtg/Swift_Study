@@ -14,6 +14,7 @@
 		5957BA8224767DED003E0BE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5957BA8124767DED003E0BE1 /* Preview Assets.xcassets */; };
 		5957BA8524767DED003E0BE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5957BA8324767DED003E0BE1 /* LaunchScreen.storyboard */; };
 		5957BA8D2476855E003E0BE1 /* ToggleTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5957BA8C2476855E003E0BE1 /* ToggleTextButton.swift */; };
+		5957BA8F247756FC003E0BE1 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5957BA8E247756FC003E0BE1 /* PokemonDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5957BA8424767DED003E0BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5957BA8624767DED003E0BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5957BA8C2476855E003E0BE1 /* ToggleTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTextButton.swift; sourceTree = "<group>"; };
+		5957BA8E247756FC003E0BE1 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				5957BA7A24767DEA003E0BE1 /* SceneDelegate.swift */,
 				5957BA7C24767DEA003E0BE1 /* ContentView.swift */,
 				5957BA8C2476855E003E0BE1 /* ToggleTextButton.swift */,
+				5957BA8E247756FC003E0BE1 /* PokemonDetail.swift */,
 				5957BA7E24767DED003E0BE1 /* Assets.xcassets */,
 				5957BA8324767DED003E0BE1 /* LaunchScreen.storyboard */,
 				5957BA8624767DED003E0BE1 /* Info.plist */,
@@ -151,6 +154,7 @@
 			files = (
 				5957BA8D2476855E003E0BE1 /* ToggleTextButton.swift in Sources */,
 				5957BA7924767DEA003E0BE1 /* AppDelegate.swift in Sources */,
+				5957BA8F247756FC003E0BE1 /* PokemonDetail.swift in Sources */,
 				5957BA7B24767DEA003E0BE1 /* SceneDelegate.swift in Sources */,
 				5957BA7D24767DEA003E0BE1 /* ContentView.swift in Sources */,
 			);

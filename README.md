@@ -9,6 +9,11 @@ OC interview summary
 ---
 
 2020年05月21日
+14.[五、(翻译) SwiftUI -- 创建详情页](https://www.jianshu.com/p/f71231a19297)
+
+13.[四、(翻译) SwiftUI -- 理解 Binding](https://www.jianshu.com/p/ed9d278a04a0)
+
+12.[三、(翻译)SwiftUI -- 动态列表和 Identifiable](https://www.jianshu.com/p/2713f904a405)
 
 11.[二、(翻译) SwiftUI - 理解 State](https://www.jianshu.com/p/aace56356aa7)
 

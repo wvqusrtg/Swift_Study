@@ -16,6 +16,7 @@
 		8CB48B0A247A58C900DB5C95 /* NewTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB48B09247A58C900DB5C95 /* NewTodayTests.swift */; };
 		8CB48B15247A58C900DB5C95 /* NewTodayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB48B14247A58C900DB5C95 /* NewTodayUITests.swift */; };
 		8CB48B23247A598200DB5C95 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB48B22247A598200DB5C95 /* Common.swift */; };
+		8CB48B27247A605E00DB5C95 /* HttpDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB48B26247A605E00DB5C95 /* HttpDatas.swift */; };
 		E118B929DE0CAEC473B84D83 /* Pods_NewToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CD3B2B8199346F95E382D5 /* Pods_NewToday.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		8CB48B14247A58C900DB5C95 /* NewTodayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodayUITests.swift; sourceTree = "<group>"; };
 		8CB48B16247A58C900DB5C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CB48B22247A598200DB5C95 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		8CB48B26247A605E00DB5C95 /* HttpDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDatas.swift; sourceTree = "<group>"; };
 		B44832513AA6EB2EA0777B59 /* Pods-NewToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewToday.debug.xcconfig"; path = "Target Support Files/Pods-NewToday/Pods-NewToday.debug.xcconfig"; sourceTree = "<group>"; };
 		E59F000C92A9ABA25A64CBA3 /* Pods-NewToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewToday.release.xcconfig"; path = "Target Support Files/Pods-NewToday/Pods-NewToday.release.xcconfig"; sourceTree = "<group>"; };
 		E6CD3B2B8199346F95E382D5 /* Pods_NewToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,10 +127,11 @@
 		8CB48AF1247A58C000DB5C95 /* NewToday */ = {
 			isa = PBXGroup;
 			children = (
+				8CB48B25247A604600DB5C95 /* 网络请求 */,
+				8CB48B24247A603800DB5C95 /* 宏文件 */,
 				8CB48AF2247A58C000DB5C95 /* AppDelegate.swift */,
 				8CB48AF4247A58C000DB5C95 /* SceneDelegate.swift */,
 				8CB48AF6247A58C000DB5C95 /* ViewController.swift */,
-				8CB48B22247A598200DB5C95 /* Common.swift */,
 				8CB48AF8247A58C000DB5C95 /* Main.storyboard */,
 				8CB48AFB247A58C900DB5C95 /* Assets.xcassets */,
 				8CB48AFD247A58C900DB5C95 /* LaunchScreen.storyboard */,
@@ -153,6 +156,22 @@
 				8CB48B16247A58C900DB5C95 /* Info.plist */,
 			);
 			path = NewTodayUITests;
+			sourceTree = "<group>";
+		};
+		8CB48B24247A603800DB5C95 /* 宏文件 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB48B22247A598200DB5C95 /* Common.swift */,
+			);
+			path = "宏文件";
+			sourceTree = "<group>";
+		};
+		8CB48B25247A604600DB5C95 /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				8CB48B26247A605E00DB5C95 /* HttpDatas.swift */,
+			);
+			path = "网络请求";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +351,7 @@
 			files = (
 				8CB48B23247A598200DB5C95 /* Common.swift in Sources */,
 				8CB48AF7247A58C000DB5C95 /* ViewController.swift in Sources */,
+				8CB48B27247A605E00DB5C95 /* HttpDatas.swift in Sources */,
 				8CB48AF3247A58C000DB5C95 /* AppDelegate.swift in Sources */,
 				8CB48AF5247A58C000DB5C95 /* SceneDelegate.swift in Sources */,
 			);

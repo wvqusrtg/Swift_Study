@@ -15,6 +15,7 @@
 		8CB48AFF247A58C900DB5C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB48AFD247A58C900DB5C95 /* LaunchScreen.storyboard */; };
 		8CB48B0A247A58C900DB5C95 /* NewTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB48B09247A58C900DB5C95 /* NewTodayTests.swift */; };
 		8CB48B15247A58C900DB5C95 /* NewTodayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB48B14247A58C900DB5C95 /* NewTodayUITests.swift */; };
+		8CB48B23247A598200DB5C95 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB48B22247A598200DB5C95 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8CB48B10247A58C900DB5C95 /* NewTodayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewTodayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB48B14247A58C900DB5C95 /* NewTodayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodayUITests.swift; sourceTree = "<group>"; };
 		8CB48B16247A58C900DB5C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB48B22247A598200DB5C95 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				8CB48AF2247A58C000DB5C95 /* AppDelegate.swift */,
 				8CB48AF4247A58C000DB5C95 /* SceneDelegate.swift */,
 				8CB48AF6247A58C000DB5C95 /* ViewController.swift */,
+				8CB48B22247A598200DB5C95 /* Common.swift */,
 				8CB48AF8247A58C000DB5C95 /* Main.storyboard */,
 				8CB48AFB247A58C900DB5C95 /* Assets.xcassets */,
 				8CB48AFD247A58C900DB5C95 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB48B23247A598200DB5C95 /* Common.swift in Sources */,
 				8CB48AF7247A58C000DB5C95 /* ViewController.swift in Sources */,
 				8CB48AF3247A58C000DB5C95 /* AppDelegate.swift in Sources */,
 				8CB48AF5247A58C000DB5C95 /* SceneDelegate.swift in Sources */,

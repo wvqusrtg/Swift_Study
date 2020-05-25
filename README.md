@@ -13,8 +13,9 @@ OC interview summary
 
 17.[SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）](https://www.jianshu.com/p/daa3496c9736)
     ![](./Res/20200507Sketch绘制图标/SnapKit.png)
-    17.1 Common公共类、Base基类、Home等目录更新；
-    17.2 func initView() {
+```
+17.1 Common公共类、Base基类、Home等目录更新；
+17.2 func initView() {
         self.view.addSubview(bgView)
         //这里SnapKit使用了闭包
         bgView.snp.makeConstraints { (ConstraintMaker) in
@@ -31,8 +32,8 @@ OC interview summary
             make.trailing.equalTo(-kMargin)
         }
     }
-    17.3
-
+17.3
+```
 16.[16.100 Days of SwiftUI-待学习](https://www.jianshu.com/p/dc1ef05d9d4f)
 
 ---

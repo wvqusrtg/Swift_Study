@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		58A3EF83284EEF288186E3C5 /* Pods_InterviewSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F0DA9C8C853E2C5216DDDC /* Pods_InterviewSwift.framework */; };
+		5950A733247B90E700CA3BD3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A732247B90E700CA3BD3 /* HomeViewController.swift */; };
+		5950A736247B917E00CA3BD3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A735247B917E00CA3BD3 /* BaseViewController.swift */; };
+		5950A739247B91BC00CA3BD3 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A738247B91BC00CA3BD3 /* Common.swift */; };
 		8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */; };
 		8C96CDC02462A62E00A420F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */; };
 		8C96CDC22462A62E00A420F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDC12462A62E00A420F6 /* ViewController.swift */; };
@@ -16,7 +19,7 @@
 		8C96CDCA2462A63100A420F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C96CDC82462A63100A420F6 /* LaunchScreen.storyboard */; };
 		8C96CDD52462A63100A420F6 /* InterviewSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDD42462A63100A420F6 /* InterviewSwiftTests.swift */; };
 		8C96CDE02462A63100A420F6 /* InterviewSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDDF2462A63100A420F6 /* InterviewSwiftUITests.swift */; };
-		8C96CDEF2462A69F00A420F6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDEE2462A69F00A420F6 /* HomeViewController.swift */; };
+		8C96CDEF2462A69F00A420F6 /* SnapkitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDEE2462A69F00A420F6 /* SnapkitController.swift */; };
 		8CFFC15A24639EA700F9D480 /* HomeTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFC15924639EA700F9D480 /* HomeTableTableViewController.swift */; };
 		8CFFC15D2463A07A00F9D480 /* MomentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFFC15C2463A07A00F9D480 /* MomentTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		24673153372F5811824E084E /* Pods-InterviewSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewSwift.release.xcconfig"; path = "Target Support Files/Pods-InterviewSwift/Pods-InterviewSwift.release.xcconfig"; sourceTree = "<group>"; };
+		5950A732247B90E700CA3BD3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5950A735247B917E00CA3BD3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5950A738247B91BC00CA3BD3 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		8C96CDBA2462A62E00A420F6 /* InterviewSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +60,7 @@
 		8C96CDDB2462A63100A420F6 /* InterviewSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C96CDDF2462A63100A420F6 /* InterviewSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewSwiftUITests.swift; sourceTree = "<group>"; };
 		8C96CDE12462A63100A420F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C96CDEE2462A69F00A420F6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8C96CDEE2462A69F00A420F6 /* SnapkitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapkitController.swift; sourceTree = "<group>"; };
 		8CFFC15924639EA700F9D480 /* HomeTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableTableViewController.swift; sourceTree = "<group>"; };
 		8CFFC15C2463A07A00F9D480 /* MomentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentTableViewCell.swift; sourceTree = "<group>"; };
 		BED0B53D859C8628A1D4C7CA /* Pods-InterviewSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewSwift.debug.xcconfig"; path = "Target Support Files/Pods-InterviewSwift/Pods-InterviewSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +93,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5950A72F247B8F9100CA3BD3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CFFC15924639EA700F9D480 /* HomeTableTableViewController.swift */,
+				5950A732247B90E700CA3BD3 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5950A730247B8F9D00CA3BD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5950A731247B904C00CA3BD3 /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				8C96CDEE2462A69F00A420F6 /* SnapkitController.swift */,
+			);
+			path = SnapKit;
+			sourceTree = "<group>";
+		};
+		5950A734247B917400CA3BD3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5950A735247B917E00CA3BD3 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5950A737247B91B200CA3BD3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5950A738247B91BC00CA3BD3 /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		836832A1188685A0A4D2A732 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +175,9 @@
 		8C96CDBC2462A62E00A420F6 /* InterviewSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5950A737247B91B200CA3BD3 /* Common */,
+				5950A734247B917400CA3BD3 /* Base */,
+				5950A731247B904C00CA3BD3 /* SnapKit */,
 				8C96CDED2462A68D00A420F6 /* Home */,
 				8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */,
 				8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */,
@@ -162,9 +211,9 @@
 		8C96CDED2462A68D00A420F6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5950A730247B8F9D00CA3BD3 /* Model */,
+				5950A72F247B8F9100CA3BD3 /* Controller */,
 				8CFFC15B2463A06400F9D480 /* View */,
-				8C96CDEE2462A69F00A420F6 /* HomeViewController.swift */,
-				8CFFC15924639EA700F9D480 /* HomeTableTableViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -356,7 +405,10 @@
 				8CFFC15A24639EA700F9D480 /* HomeTableTableViewController.swift in Sources */,
 				8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */,
 				8C96CDC02462A62E00A420F6 /* SceneDelegate.swift in Sources */,
-				8C96CDEF2462A69F00A420F6 /* HomeViewController.swift in Sources */,
+				5950A739247B91BC00CA3BD3 /* Common.swift in Sources */,
+				8C96CDEF2462A69F00A420F6 /* SnapkitController.swift in Sources */,
+				5950A736247B917E00CA3BD3 /* BaseViewController.swift in Sources */,
+				5950A733247B90E700CA3BD3 /* HomeViewController.swift in Sources */,
 				8CFFC15D2463A07A00F9D480 /* MomentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

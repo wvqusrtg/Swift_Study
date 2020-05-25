@@ -61,10 +61,10 @@ class HomeTableTableViewController: UITableViewController {
     ///   - tableView: 表格
     ///   - indexPath: indexPath
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //cell选择动作取消
+        //cell反选
         tableView.deselectRow(at: indexPath, animated: true)
         //打印点击行
-        print("---Section:\(indexPath.section) ---row:\(indexPath.row)")
+        //print("---Section:\(indexPath.section) ---row:\(indexPath.row)")
         //控制器跳转
         pushVC(indexpath: indexPath)
     }
@@ -73,9 +73,15 @@ class HomeTableTableViewController: UITableViewController {
     /// - Parameter indexpath: 表格 section/row
     private func pushVC(indexpath:IndexPath) {
         self.navigationController?.hidesBottomBarWhenPushed = true
-        let tarVC = HomeViewController()
-        tarVC.navigationItem.title = data[indexpath.row][0]
-        self.navigationController?.pushViewController(tarVC, animated: true)
+        var tarVC : UIViewController?
+        switch indexpath.row {
+        case 0:
+            tarVC = SnapkitController()
+        default:
+            tarVC = HomeViewController()
+        }
+        tarVC?.navigationItem.title = data[indexpath.row][0]
+        self.navigationController?.pushViewController(tarVC ?? HomeViewController(), animated: true)
     }
     
     /*

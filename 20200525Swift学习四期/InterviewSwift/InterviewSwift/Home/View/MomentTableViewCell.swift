@@ -19,7 +19,7 @@ class MomentTableViewCell: UITableViewCell {
     lazy var usernameLabel:UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.systemFont(ofSize: 13)
         //设置高度自动适配
         label.numberOfLines = 0
         label.lineBreakMode = .byCharWrapping

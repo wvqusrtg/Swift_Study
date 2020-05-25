@@ -19,12 +19,17 @@ class MomentTableViewCell: UITableViewCell {
     lazy var usernameLabel:UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
+        label.font = UIFont.systemFont(ofSize: 12)
+        //设置高度自动适配
+        label.numberOfLines = 0
+        label.lineBreakMode = .byCharWrapping
         return label
     }()
     
     lazy var contentLabel:UILabel = {
         let label = UILabel()
         label.textColor = UIColor.gray
+        label.font = UIFont.systemFont(ofSize: 15)
         //设置高度自动适配
         label.numberOfLines = 0
         label.lineBreakMode = .byCharWrapping
@@ -32,11 +37,13 @@ class MomentTableViewCell: UITableViewCell {
     }()
         
     func snpLayoutSubview(){
+        //添加控件-布局视图
         self.contentView.addSubview(usernameLabel)
         self.contentView.addSubview(contentLabel)
         usernameLabel.snp.makeConstraints { make in
             make.top.equalTo(10)
             make.left.equalTo(10)
+            make.right.equalTo(-10)
         }
         contentLabel.snp.makeConstraints { make in
             make.top.equalTo(usernameLabel.snp.bottom)

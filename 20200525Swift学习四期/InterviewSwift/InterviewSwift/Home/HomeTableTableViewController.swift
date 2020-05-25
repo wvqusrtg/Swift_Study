@@ -16,7 +16,7 @@ class HomeTableTableViewController: UITableViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Swift学习"
-        data.append(["1.宋茜","美食玩出新花样，好吃也要颜值在线！轩尼诗干邑特饮搭配酥脆大虾，你馋了吗？戳这里了解一下同款搭配哦！"])
+        data.append(["1.SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）","https://www.jianshu.com/p/daa3496c9736"])
         data.append(["2.吃喝实验室","​​每当夏季来临，烧烤作为大排挡的必选美食，用它那独有的芬芳占据着每一个吃货的味蕾，让辛苦一天的人儿能够在美食当中，放飞自我。"])
         data.append(["3.姚晨","上个月回了趟家，担任了“福建省旅游形象大使”。从今往后，将持续为家乡美景美食打call。跟姐来，带你坐上“全福游”，好吃好玩没理由！"])
         data.append(["4.天天美食推荐","吃了几十年蒸水蛋，原来这才是最正确的做法，孩子抢着吃！"])
@@ -73,7 +73,9 @@ class HomeTableTableViewController: UITableViewController {
     /// - Parameter indexpath: 表格 section/row
     private func pushVC(indexpath:IndexPath) {
         self.navigationController?.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(HomeViewController(), animated: true)
+        let tarVC = HomeViewController()
+        tarVC.navigationItem.title = data[indexpath.row][0]
+        self.navigationController?.pushViewController(tarVC, animated: true)
     }
     
     /*

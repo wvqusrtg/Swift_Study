@@ -15,7 +15,7 @@ target 'InterviewSwift' do
  # Pods for Pos
  pod 'SnapKit'
  #pod 'Bugly'
- 
+ pod 'MBProgressHUD'
 end
 #Xcode里配置：项目名->Target->Build Settings->Enable BitCode中设置为NO就可以了.
 post_install do |installer|

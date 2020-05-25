@@ -5,10 +5,13 @@ OC interview summary
 ![](./Res/20200507Sketch绘制图标/Swift_Small.png)
 
 ---
+2020年05月22日
 
+15.[(翻译) SwiftUI -- 手势的实现](https://www.jianshu.com/p/457ef71cb8e8)
 ---
 
 2020年05月21日
+
 14.[五、(翻译) SwiftUI -- 创建详情页](https://www.jianshu.com/p/f71231a19297)
 
 13.[四、(翻译) SwiftUI -- 理解 Binding](https://www.jianshu.com/p/ed9d278a04a0)

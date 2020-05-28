@@ -11,11 +11,11 @@ OC/Swift interview summary
 
 
 
-17.[SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）](https://www.jianshu.com/p/daa3496c9736)
+18.[SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）](https://www.jianshu.com/p/daa3496c9736)
     ![](./Res/20200507Sketch绘制图标/SnapKit.png)
 ```
-17.1 Common公共类、Base基类、Home等目录更新；
-17.2 func initView() {
+18.1 Common公共类、Base基类、Home等目录更新；
+18.2 func initView() {
         self.view.addSubview(bgView)
         //这里SnapKit使用了闭包
         bgView.snp.makeConstraints { (ConstraintMaker) in
@@ -32,30 +32,31 @@ OC/Swift interview summary
             make.trailing.equalTo(-kMargin)
         }
     }
-17.3
 ```
-16.[16.100 Days of SwiftUI-待学习](https://www.jianshu.com/p/dc1ef05d9d4f)
+17.[NewToday 仿写今日头条项目-基础Common类封装、Alamofire封装 - 20200524Swift学习四期](./20200524Swift学习四期)
+
+16.[16.100 Days of SwiftUI-待学习 - 20200521Swift学习三期](https://www.jianshu.com/p/dc1ef05d9d4f)
 
 ---
 2020年05月22日
 
-15.[(翻译) SwiftUI -- 手势的实现](https://www.jianshu.com/p/457ef71cb8e8)
+15.[(翻译) SwiftUI -- 手势的实现 - 20200521Swift学习三期](https://www.jianshu.com/p/457ef71cb8e8)
 
 ---
 
 2020年05月21日
 
-14.[五、(翻译) SwiftUI -- 创建详情页](https://www.jianshu.com/p/f71231a19297)
+14.[五、(翻译) SwiftUI -- 创建详情页 - 20200521Swift学习三期](https://www.jianshu.com/p/f71231a19297)
 
-13.[四、(翻译) SwiftUI -- 理解 Binding](https://www.jianshu.com/p/ed9d278a04a0)
+13.[四、(翻译) SwiftUI -- 理解 Binding - 20200521Swift学习三期](https://www.jianshu.com/p/ed9d278a04a0)
 
-12.[三、(翻译)SwiftUI -- 动态列表和 Identifiable](https://www.jianshu.com/p/2713f904a405)
+12.[三、(翻译)SwiftUI -- 动态列表和 Identifiable - 20200521Swift学习三期](https://www.jianshu.com/p/2713f904a405)
 
-11.[二、(翻译) SwiftUI - 理解 State](https://www.jianshu.com/p/aace56356aa7)
+11.[二、(翻译) SwiftUI - 理解 State - 20200521Swift学习三期](https://www.jianshu.com/p/aace56356aa7)
 
-10.[一、(翻译) SwiftUI - 怎样去开始一个新项目](https://www.jianshu.com/p/3828c5a5ba92)
+10.[一、(翻译) SwiftUI - 怎样去开始一个新项目 - 20200521Swift学习三期](https://www.jianshu.com/p/3828c5a5ba92)
 
-9.[Swift 5.1 极简参考手册](https://blog.csdn.net/zsxjtip/article/details/104155074?ops_request_misc=&request_id=&biz_id=102&utm_term=swift5.1&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-104155074) 
+9.[Swift 5.1 极简参考手册 - ./Swift_Study/20200521Swift学习二期/SwiftBasicReview/SwiftBasicReview/main.swift](https://blog.csdn.net/zsxjtip/article/details/104155074?ops_request_misc=&request_id=&biz_id=102&utm_term=swift5.1&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-104155074) 
 ```    
 2020年05月14日
 8.Swift 教程：https://swiftgg.gitbook.io/swift/swift-jiao-cheng

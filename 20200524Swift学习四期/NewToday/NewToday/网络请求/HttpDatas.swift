@@ -37,13 +37,15 @@ extension HttpDatas{
     func requestDatas(_ type:MothodType,URLString:String,paramaters:[String:Any]?,finishCallBack:@escaping(_ response:Any) -> ()) {
         //获取请求类型
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
-        
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json"
+        ]
         //发送网络请求
-        Alamofire.request(URLString, method: method, parameters: paramaters, encoding: URLEncoding.default, headers: nil).responseJSON { (responseJson) in
+        Alamofire.request(URLString, method: method, parameters: paramaters, encoding: URLEncoding.default, headers:headers).responseJSON { (responseJson) in
             //判断是否请求成功
             guard responseJson.result.value != nil else{
                 //如果返回值nil,则打印具体错误信息，反之：返回值不为nil 往下走
-                print(responseJson.result.error)
+                print(responseJson.result.error ?? "responseJson.result.value 为nil")
                 return
             }
             

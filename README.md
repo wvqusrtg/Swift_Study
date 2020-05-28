@@ -8,8 +8,14 @@ OC/Swift interview summary
 ---
 
 2020年05月25日
+20.Playground 导入 import UIKit 、import PlaygroundSupport支持显示视图
 
-
+19.[哔哩哔哩BiliBili MJ-Swift学习- 20200528Swift学习五期](https://www.bilibili.com/video/BV1eE411M7Ha?p=1)
+```
+    Playground能分页编写-这个比较有用（收回我原来说的Playground不好用）
+    Command+Shift+Enter:运行整个Playground
+    Shift+Enter:运行截止到某一行代码
+```
 
 18.[SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）](https://www.jianshu.com/p/daa3496c9736)
     ![](./Res/20200507Sketch绘制图标/SnapKit.png)

@@ -1,5 +1,5 @@
-# OCInterview
-OC interview summary
+# OC/Swift Interview
+OC/Swift interview summary
 
 ![](./Res/20200507Sketch绘制图标/ObjectC_Small.png)
 ![](./Res/20200507Sketch绘制图标/Swift_Small.png)

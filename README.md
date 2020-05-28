@@ -4,11 +4,47 @@ OC interview summary
 ![](./Res/20200507Sketch绘制图标/ObjectC_Small.png)
 ![](./Res/20200507Sketch绘制图标/Swift_Small.png)
 
+
 ---
+
+2020年05月25日
+
+
+
+17.[SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）](https://www.jianshu.com/p/daa3496c9736)
+    ![](./Res/20200507Sketch绘制图标/SnapKit.png)
+```
+17.1 Common公共类、Base基类、Home等目录更新；
+17.2 func initView() {
+        self.view.addSubview(bgView)
+        //这里SnapKit使用了闭包
+        bgView.snp.makeConstraints { (ConstraintMaker) in
+            //注意这里直接就适配顶部和底部的安全距离了
+            ConstraintMaker.top.equalTo(self.view.snp_topMargin).offset(kMargin);
+            ConstraintMaker.bottom.equalTo(self.view.snp_bottomMargin).offset(-kMargin);
+            ConstraintMaker.left.equalTo(kMargin)
+            ConstraintMaker.right.equalTo(-kMargin)
+        }
+        bgView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(bgView.snp_topMargin).offset(kMargin)
+            make.leading.equalTo(kMargin)
+            make.trailing.equalTo(-kMargin)
+        }
+    }
+17.3
+```
+16.[16.100 Days of SwiftUI-待学习](https://www.jianshu.com/p/dc1ef05d9d4f)
+
+---
+2020年05月22日
+
+15.[(翻译) SwiftUI -- 手势的实现](https://www.jianshu.com/p/457ef71cb8e8)
 
 ---
 
 2020年05月21日
+
 14.[五、(翻译) SwiftUI -- 创建详情页](https://www.jianshu.com/p/f71231a19297)
 
 13.[四、(翻译) SwiftUI -- 理解 Binding](https://www.jianshu.com/p/ed9d278a04a0)

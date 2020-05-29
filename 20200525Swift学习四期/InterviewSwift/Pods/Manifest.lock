@@ -1,20 +1,34 @@
 PODS:
-  - MBProgressHUD (1.2.0)
-  - SnapKit (5.0.1)
+  - MBProgressHUD (1.1.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SnapKit (5.0.0)
 
 DEPENDENCIES:
   - MBProgressHUD
+  - RxCocoa (~> 5.0)
+  - RxSwift (~> 5.0)
   - SnapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - MBProgressHUD
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SnapKit
 
 SPEC CHECKSUMS:
-  MBProgressHUD: 4acba3cb8da37dc157aaf5a5dfa53045b90c7c52
-  SnapKit: b15da25fd6ce6890906e11026ddd42ab61528af9
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: f231952b0e643c1e9828c827ad2cee336c4706b4
+PODFILE CHECKSUM: 68e732a8fb5b77908347f108e609a82d5a9f3d58
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.2

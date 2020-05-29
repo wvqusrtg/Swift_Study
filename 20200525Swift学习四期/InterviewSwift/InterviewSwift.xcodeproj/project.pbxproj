@@ -13,6 +13,7 @@
 		5950A739247B91BC00CA3BD3 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A738247B91BC00CA3BD3 /* Common.swift */; };
 		5950A73B247BB48E00CA3BD3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73A247BB48E00CA3BD3 /* Question.swift */; };
 		5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */; };
+		5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */; };
 		8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */; };
 		8C96CDC02462A62E00A420F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */; };
 		8C96CDC22462A62E00A420F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDC12462A62E00A420F6 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		5950A738247B91BC00CA3BD3 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5950A73A247BB48E00CA3BD3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		8C96CDBA2462A62E00A420F6 /* InterviewSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,8 +102,8 @@
 		5950A72F247B8F9100CA3BD3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5950A7412480D89400CA3BD3 /* defaultVC */,
 				8CFFC15924639EA700F9D480 /* HomeTableTableViewController.swift */,
-				5950A732247B90E700CA3BD3 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,14 +115,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5950A731247B904C00CA3BD3 /* SnapKit */ = {
+		5950A731247B904C00CA3BD3 /* 20200525SnapKit */ = {
 			isa = PBXGroup;
 			children = (
 				8C96CDEE2462A69F00A420F6 /* SnapkitController.swift */,
 				5950A73A247BB48E00CA3BD3 /* Question.swift */,
 				5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */,
 			);
-			path = SnapKit;
+			path = 20200525SnapKit;
 			sourceTree = "<group>";
 		};
 		5950A734247B917400CA3BD3 /* Base */ = {
@@ -137,6 +139,22 @@
 				5950A738247B91BC00CA3BD3 /* Common.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		5950A73E24809A1500CA3BD3 /* 20200529RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */,
+			);
+			path = 20200529RxSwift;
+			sourceTree = "<group>";
+		};
+		5950A7412480D89400CA3BD3 /* defaultVC */ = {
+			isa = PBXGroup;
+			children = (
+				5950A732247B90E700CA3BD3 /* HomeViewController.swift */,
+			);
+			path = defaultVC;
 			sourceTree = "<group>";
 		};
 		836832A1188685A0A4D2A732 /* Frameworks */ = {
@@ -181,9 +199,10 @@
 		8C96CDBC2462A62E00A420F6 /* InterviewSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5950A73E24809A1500CA3BD3 /* 20200529RxSwift */,
 				5950A737247B91B200CA3BD3 /* Common */,
 				5950A734247B917400CA3BD3 /* Base */,
-				5950A731247B904C00CA3BD3 /* SnapKit */,
+				5950A731247B904C00CA3BD3 /* 20200525SnapKit */,
 				8C96CDED2462A68D00A420F6 /* Home */,
 				8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */,
 				8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */,
@@ -415,6 +434,7 @@
 				5950A73B247BB48E00CA3BD3 /* Question.swift in Sources */,
 				8C96CDEF2462A69F00A420F6 /* SnapkitController.swift in Sources */,
 				5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */,
+				5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */,
 				5950A736247B917E00CA3BD3 /* BaseViewController.swift in Sources */,
 				5950A733247B90E700CA3BD3 /* HomeViewController.swift in Sources */,
 				8CFFC15D2463A07A00F9D480 /* MomentTableViewCell.swift in Sources */,

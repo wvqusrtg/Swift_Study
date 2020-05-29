@@ -16,10 +16,7 @@ class HomeTableTableViewController: UITableViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Swift学习"
-        data.append(["1.SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）","https://www.jianshu.com/p/daa3496c9736"])
-        data.append(["2.SnapKit框架解析（二） —— SnapKit应用的一个简单示例（二）","​​https://www.jianshu.com/p/0bf8f5d2db95"])
-        data.append(["3.姚晨","上个月回了趟家，担任了“福建省旅游形象大使”。从今往后，将持续为家乡美景美食打call。跟姐来，带你坐上“全福游”，好吃好玩没理由！"])
-        data.append(["4.天天美食推荐","吃了几十年蒸水蛋，原来这才是最正确的做法，孩子抢着吃！"])
+        initData()
         // 关键代码，设置行高自动适配
         tableView.rowHeight = UITableView.automaticDimension
         
@@ -29,7 +26,7 @@ class HomeTableTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,12 +70,15 @@ class HomeTableTableViewController: UITableViewController {
     /// - Parameter indexpath: 表格 section/row
     private func pushVC(indexpath:IndexPath) {
         self.navigationController?.hidesBottomBarWhenPushed = true
+        
         var tarVC : UIViewController?
         switch indexpath.row {
         case 0:
             tarVC = SnapkitController()
         case 1:
             tarVC = QuizViewController()
+        case 2:
+            tarVC = RxSwiftViewController()
         default:
             tarVC = HomeViewController()
         }
@@ -86,6 +86,14 @@ class HomeTableTableViewController: UITableViewController {
         self.navigationController?.pushViewController(tarVC ?? HomeViewController(), animated: true)
     }
     
+    /// 数据初始化
+    func initData() {
+        data.append(["1.SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）","https://www.jianshu.com/p/daa3496c9736"])
+        data.append(["2.SnapKit框架解析（二） —— SnapKit应用的一个简单示例（二）","​​https://www.jianshu.com/p/0bf8f5d2db95"])
+        data.append(["3.RxSwift中文文档","https://beeth0ven.github.io/RxSwift-Chinese-Documentation/"])
+        data.append(["4.天天美食推荐","吃了几十年蒸水蛋，原来这才是最正确的做法，孩子抢着吃！"])
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

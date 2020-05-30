@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios'>
     <pages>
-        <page name='Page02'/>
-        <page name='Page01'/>
+        <page name='Page01_加载视图显示'/>
+        <page name='Page02_函数'/>
+        <page name='Page03_函数重载'/>
+        <page name='Page04_内联函数'/>
+        <page name='Page05_函数类型'/>
     </pages>
 </playground>

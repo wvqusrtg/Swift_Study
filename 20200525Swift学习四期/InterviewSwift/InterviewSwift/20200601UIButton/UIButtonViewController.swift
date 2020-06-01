@@ -24,10 +24,11 @@ class UIButtonViewController: BaseViewController {
         btn001.setTitleColor(.white, for: .normal)
         btn001.layer.cornerRadius = 5.0
         btn001.addTarget(self, action: #selector(tapped), for: .touchUpInside)
-        btn001.rx.tap.subscribe({_ in
-            let str = "Welcome to china."
-            showTextWithHUD(toView: self.view, textTitle: str.lowercased(), textMsg: str.uppercased())
-        })
+        //RxSwift使用示例
+//        btn001.rx.tap.subscribe({_ in
+//            let str = "Welcome to china."
+//            showTextWithHUD(toView: self.view, textTitle: str.lowercased(), textMsg: str.uppercased())
+//        })
         return btn001
     }()
     
@@ -43,6 +44,24 @@ class UIButtonViewController: BaseViewController {
     
     @objc func tapped() {
         showTextWithHUD(toView: self.view, textTitle: nil, textMsg: "tapped触发点击事件")
+        let str:String=""
+        if str.isEmpty {
+            print("空字符串")
+        }
+        
+        for _ in 1...10 {
+            let temp = Int(arc4random()%10+1)
+            //print(temp)
+        }
+        print("---")
+        for _ in 1...10 {
+            let temp = Int(arc4random_uniform(10))+1
+            //print(temp)
+        }
+        print("---")
+        for i in (0..<10).reversed(){
+            print(i)
+        }
     }
     /*
     // MARK: - Navigation

@@ -26,6 +26,22 @@
 
 []()
 
+[]()
+
+[]()
+
+[]()
+
+[23.Swift - 分段选择控件（UISegmentedControl）的用法](https://www.hangge.com/blog/cache/detail_533.html)
+
+[22.Swift - 开关按钮（UISwitch）的用法](https://www.hangge.com/blog/cache/detail_532.html)
+
+[21.Swift - 多行文本输入框（UITextView）的用法](https://www.hangge.com/blog/cache/detail_531.html)
+
+[20.Swift - 文本输入框（UITextField）的用法](https://www.hangge.com/blog/cache/detail_530.html)
+
+[19.Swift - 文本标签（UILabel）的用法](https://www.hangge.com/blog/cache/detail_528.html)
+
 [18.Swift - 文件，文件夹操作大全](https://www.hangge.com/blog/cache/detail_527.html)
 
 ![](./Res/20200507Sketch绘制图标/SwiftBasic.jpg)

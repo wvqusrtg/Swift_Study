@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import SnapKit
-import RxSwift
-import RxCocoa
 
 /// Cocoapods能更新了
 /// https://beeth0ven.github.io/RxSwift-Chinese-Documentation/

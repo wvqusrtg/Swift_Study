@@ -15,6 +15,7 @@ func + (left:CenterPointer,right:CenterPointer)->CenterPointer{
 let pointer1 = CenterPointer(x: 1, y: 1)
 let pointer2 = CenterPointer(x: 2, y: 2)
 let pointer3 = pointer1 + pointer2
+print(pointer3.x,pointer3.y)
 
 func == (left:CenterPointer, right:CenterPointer) -> Bool {
     return (left.x == right.x) && (left.y == right.y)
@@ -23,6 +24,8 @@ func == (left:CenterPointer, right:CenterPointer) -> Bool {
 func != (left:CenterPointer, right:CenterPointer) -> Bool {
     return !(left == right)
 }
+
+
 
 
 

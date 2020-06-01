@@ -1,13 +1,47 @@
-# OC/Swift Interview
-OC/Swift interview summary
+# Swift_Study
+Swift_Study
 
 ![](./Res/20200507Sketch绘制图标/ObjectC_Small.png)
 ![](./Res/20200507Sketch绘制图标/Swift_Small.png)
 
+---
+
+2020年06月01日
+
+
+[25.hangge_README.md](./hangge_README.md)
+
+23.Common.swift 自定义MBProgressHUD提示框-by:nixs 2020年06月01日09:05:18
 
 ---
 
-2020年05月25日
+2020年05月29日
+
+22.Podfile更新重新引入
+```
+#RxSwift
+ pod 'RxSwift', '~> 5.0'
+ pod 'RxCocoa', '~> 5.0'
+```
+
+21.注:今天不能来现场办公了,流量不够只能看网页资料了
+    
+[RxSwift中文文档](https://beeth0ven.github.io/RxSwift-Chinese-Documentation/)
+    
+```
+简介
+
+2016 RxSwift: ReactiveX for Swift
+
+ReactiveX（简写: Rx） 是一个可以帮助我们简化异步编程的框架。
+    RxSwift 是 Rx 的 Swift 版本。
+    它尝试将原有的一些概念移植到 iOS/macOS 平台。
+    你可以在这里找到跨平台文档 ReactiveX.io。
+    KVO，异步操作 和 流 全部被统一成抽象序列。这就是为什么 Rx 会如此简单，优雅和强大。
+```
+---
+
+2020年05月28日
 
 20.Playground 导入 import UIKit 、import PlaygroundSupport支持显示视图
 

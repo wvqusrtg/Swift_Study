@@ -79,6 +79,8 @@ class HomeTableTableViewController: UITableViewController {
             tarVC = QuizViewController()
         case 2:
             tarVC = RxSwiftViewController()
+        case 3:
+            tarVC = UIButtonViewController()
         default:
             tarVC = HomeViewController()
         }
@@ -91,7 +93,8 @@ class HomeTableTableViewController: UITableViewController {
         data.append(["1.SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）","https://www.jianshu.com/p/daa3496c9736"])
         data.append(["2.SnapKit框架解析（二） —— SnapKit应用的一个简单示例（二）","​​https://www.jianshu.com/p/0bf8f5d2db95"])
         data.append(["3.RxSwift中文文档","https://beeth0ven.github.io/RxSwift-Chinese-Documentation/"])
-        data.append(["4.天天美食推荐","吃了几十年蒸水蛋，原来这才是最正确的做法，孩子抢着吃！"])
+        data.append(["4.Swift - 按钮（UIButton）的用法","https://www.hangge.com/blog/cache/detail_529.html"])
+        
         
     }
     /*

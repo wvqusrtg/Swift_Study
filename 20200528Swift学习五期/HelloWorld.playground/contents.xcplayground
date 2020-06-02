@@ -21,5 +21,6 @@
         <page name='16-Swift - 类扩展（extension）'/>
         <page name='17-Swift - 协议（protocol）'/>
         <page name='18-Swift - 文件，文件夹操作大全'/>
+        <page name='19-Swift - as、as!、as?三种类型转换操作符使用详解（附样例）'/>
     </pages>
 </playground>

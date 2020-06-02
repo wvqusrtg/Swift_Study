@@ -6,7 +6,7 @@
 
 ---
 
-2020年06月01日
+2020年06月02日
 
 []()
 
@@ -30,9 +30,11 @@
 
 []()
 
-[]()
+[24.【基础语法】 --- Swift - as、as!、as?三种类型转换操作符使用详解（附样例）](https://www.hangge.com/blog/cache/detail_1089.html)
 
 [23.Swift - 分段选择控件（UISegmentedControl）的用法](https://www.hangge.com/blog/cache/detail_533.html)
+
+2020年06月01日
 
 [22.Swift - 开关按钮（UISwitch）的用法](https://www.hangge.com/blog/cache/detail_532.html)
 

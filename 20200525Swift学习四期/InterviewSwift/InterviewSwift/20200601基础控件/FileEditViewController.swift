@@ -88,14 +88,38 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
         
         textField.becomeFirstResponder()
         
-        //--------------------
+        //---------UISwitch-----------
         self.view.addSubview(uiSwitch)
         uiSwitch.snp.makeConstraints { (make) in
             make.top.equalTo(textField.snp.bottom).offset(kMargin)
             make.centerX.equalToSuperview()
         }
+        //----------UISegmentedControl----------
+        self.view.addSubview(segmented)
+        segmented.snp.makeConstraints { (make) in
+            make.top.equalTo(uiSwitch.snp.bottom).offset(kMargin)
+            make.leading.equalTo(kMargin*3)
+            make.trailing.equalTo(-kMargin*3)
+            make.height.equalTo(kMargin*4)
+        }
+        //添加文字选项
+        segmented.insertSegment(withTitle: "选项四", at: 3, animated: true)
+        
+        
+        
         
     }
+    
+    lazy var segmented: UISegmentedControl = {
+        //选项除了文字还可以是图片
+        let items = ["选项一","选项二",UIImage(named: "coder")!] as [Any]
+        let segmented = UISegmentedControl(items: items)
+        segmented.selectedSegmentIndex = 0 //默认选中第一项目
+        segmented.tintColor = .red
+        segmented.addTarget(self, action: #selector(self.segemntDidChange(_:)), for: .valueChanged)
+        return segmented
+    }()
+    
     lazy var uiSwitch: UISwitch = {
         let uiSwitch = UISwitch()
         uiSwitch.isOn = true
@@ -103,9 +127,19 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
         return uiSwitch
     }()
     
+    /// 分段控制器选择触发事件
+    /// - Parameter segemnted: segemnted description
+    @objc func segemntDidChange(_ segemnted:UISegmentedControl) {
+        //获得选项的索引
+        print("获得选项的索引:\(segmented.selectedSegmentIndex)")
+        print("获得选择的文字:\(String(describing: segmented.titleForSegment(at: segemnted.selectedSegmentIndex)))")
+    }
+    
+    /// UISwitch开关触发事件
     @objc func switchDidChange(){
         //打印当前值
         print("UISwitch状态：\(uiSwitch.isOn)")
+        
         
     }
     

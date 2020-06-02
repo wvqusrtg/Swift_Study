@@ -104,7 +104,7 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
         }
         //添加文字选项
         segmented.insertSegment(withTitle: "选项四", at: 3, animated: true)
-        //----------UI----------
+        //----------UIImageView----------
         self.view.addSubview(imageView)
         imageView.snp.makeConstraints { (make) in
             make.top.equalTo(segmented.snp.bottom).offset(kMargin)
@@ -125,15 +125,123 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.5) {
             self.progressView.setProgress(0.99, animated: true)
         }
-        //----------UI----------
+        //----------UISlider----------
+        self.view.addSubview(self.slider)
+        self.slider.snp.makeConstraints { (make) in
+            make.top.equalTo(progressView.snp.bottom).offset(kMargin)
+            make.left.right.equalTo(progressView)
+            make.height.equalTo(kMargin/2)
+        }
+        //延迟执行
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.0) {
+            self.slider.setValue(0.6, animated: true)
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.5) {
+            self.slider.setValue(0.99, animated: true)
+        }
+        //----------UIAlertController----------
+        self.view.addSubview(self.btnUIAlertController)
+        self.btnUIAlertController.snp.makeConstraints { (make) in
+            make.top.equalTo(self.slider.snp.bottom).offset(kMargin*1.5)
+            make.left.right.equalTo(self.slider)
+            make.height.equalTo(kMargin*5)
+        }
         
-        //----------UI----------
         //----------UI----------
         //----------UI----------
         //----------UI----------
         //----------UI----------
         
                 
+    }
+    lazy var btnUIAlertController: UIButton = {
+        let btnUIAlertController = UIButton()
+        btnUIAlertController.setTitle("UIAlertController", for: .normal)
+        btnUIAlertController.setTitleColor(.white, for: .normal)
+        btnUIAlertController.backgroundColor = .red
+        btnUIAlertController.addTarget(self, action: #selector(alertControllerClicked(_:)), for: .touchUpInside)
+        btnUIAlertController.layer.cornerRadius = 5
+        return btnUIAlertController
+    }()
+    
+    /// UIAlertController点击事件
+    /// - Parameter alertController: alertController description
+    @objc func alertControllerClicked(_ alertContol:UIAlertController) {
+        
+//        let alertController = UIAlertController(title: "系统提示", message: "您确定要离开吗？", preferredStyle: .alert)
+//        //let alertController = UIAlertController(title: "系统提示", message: "您确定要离开吗？", preferredStyle: .actionSheet)
+//
+//        alertController.addTextField { (UITextField) in
+//            UITextField.placeholder = "用户名"
+//        }
+//
+//        alertController.addTextField { (UITextField) in
+//            UITextField.placeholder = "密码"
+//            UITextField.isSecureTextEntry = true
+//        }
+//
+//        let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (UIAlertAction) in
+//            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了取消按钮")
+//        }
+//        let okAction = UIAlertAction(title: "确定", style: .default) { (UIAlertAction) in
+//            let login = alertController.textFields!.first!
+//            let pwd = alertController.textFields!.last!
+//
+//            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了确定按钮 login=\(String(describing: login.text)) pwd=\(String(describing: pwd.text))")
+//        }
+//        let otherAction = UIAlertAction(title: "OtherAction", style: .default) { (UIAlertAction) in
+//            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了OtherAction按钮")
+//            //用代码移除提示框
+//            self.presentedViewController?.dismiss(animated: true, completion: nil)
+//        }
+//
+//        alertController.addAction(cancelAction)
+//        alertController.addAction(okAction)
+//        alertController.addAction(otherAction)
+//        self.present(alertController, animated: true, completion: nil)
+                
+        //----------------------------------------------------------------------
+        let alertController = UIAlertController(title: "保存成功", message: "详细信息...", preferredStyle: .alert)
+        self.present(alertController, animated: true, completion: nil)
+        //两秒钟后消失
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.0) {
+            self.presentedViewController?.dismiss(animated: true, completion: nil)
+        }
+        
+        
+    }
+    
+    lazy var slider: UISlider = {
+        let slider = UISlider()
+        slider.minimumValue = 0
+        slider.maximumValue = 1
+        slider.value = 0.3//当前默认值
+        slider.isContinuous = false//滑块滑动停止后才触发ValueChanged事件
+        slider.addTarget(self, action: #selector(sliderDidchange(_:)), for: .valueChanged)
+        
+        slider.minimumTrackTintColor = UIColor.red //左边槽的颜色
+        slider.maximumTrackTintColor = UIColor.green //右边槽的颜色
+        
+        slider.minimumValueImage = UIImage(named:"voice+")  //左边图标
+        slider.maximumValueImage = UIImage(named:"voice-")  //右边图标
+        
+        //设置滑块右边部分的图片
+        slider.setMaximumTrackImage(UIImage(named:"slider_max"),for: .normal)
+        //设置滑块左边部分的图片
+        slider.setMinimumTrackImage(UIImage(named:"slider_min"),for: .normal)
+        //设置滑块的图片
+        slider.setThumbImage(UIImage(named:"slider_thumb"),for: .normal)
+        
+        //设置滑块右边部分的图片-使用三宫格缩放（左右14像素不变，中间缩放）
+//        let imgTrackRight = UIImage(named:"slider_max")
+//        let imgRight = imgTrackRight!.stretchableImage(withLeftCapWidth: 14, topCapHeight:0)
+//        slider.setMaximumTrackImage(imgRight, for: .normal)
+        
+        return slider
+    }()
+    
+    @objc func sliderDidchange(_ slider:UISlider){
+        print(slider.value)
     }
     
     lazy var progressView: UIProgressView = {

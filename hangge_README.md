@@ -6,7 +6,7 @@
 
 ---
 
-2020年06月02日
+2020年06月02日 ↓
 
 []()
 
@@ -18,23 +18,25 @@
 
 []()
 
-[]()
+[30.Swift - 滑块（UISlider）的用法](https://www.hangge.com/blog/cache/detail_536.html)
 
-[]()
+>/Users/nixs/Desktop/20200513/Swift_Study/20200525Swift学习四期/InterviewSwift/InterviewSwift/20200601基础控件/FileEditViewController.swift ↓
 
-[]()
+>[29.Swift使用GCD实现延迟和取消操作](https://www.jianshu.com/p/6e646fc38a86)
 
-[]()
+>[28.Swift多线程:使用GCD实现异步下载图片](https://www.jianshu.com/p/de4c990f64e9)
 
-[]()
+[27.Swift - 进度条（UIProgressView）的用法](https://www.hangge.com/blog/cache/detail_535.html)
 
-[]()
+[26.Swift—抛异常(do..catch)与（try,try?,try!）的使用](https://www.jianshu.com/p/50b3d40f1150)
+
+[25.Swift - 图像控件（UIImageView）的用法](https://www.hangge.com/blog/cache/detail_534.html)
 
 [24.【基础语法】 --- Swift - as、as!、as?三种类型转换操作符使用详解（附样例）](https://www.hangge.com/blog/cache/detail_1089.html)
 
 [23.Swift - 分段选择控件（UISegmentedControl）的用法](https://www.hangge.com/blog/cache/detail_533.html)
 
-2020年06月01日
+2020年06月01日 ↓
 
 [22.Swift - 开关按钮（UISwitch）的用法](https://www.hangge.com/blog/cache/detail_532.html)
 

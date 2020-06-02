@@ -22,5 +22,6 @@
         <page name='17-Swift - 协议（protocol）'/>
         <page name='18-Swift - 文件，文件夹操作大全'/>
         <page name='19-Swift - as、as!、as?三种类型转换操作符使用详解（附样例）'/>
+        <page name='20-Swift—抛异常(do..catch)与（try,try?,try!）的使用'/>
     </pages>
 </playground>

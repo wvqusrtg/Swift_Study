@@ -73,7 +73,7 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
         
         //textField.isSecureTextEntry = true//输入内容会显示成小黑点
         
-        //textField.keyboardType = .numberPad
+        textField.keyboardType = .numberPad
         
         textField.returnKeyType = .done
         
@@ -86,7 +86,7 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
             make.height.equalTo(kMargin*5)
         }
         
-        textField.becomeFirstResponder()
+        //textField.becomeFirstResponder()
         
         //---------UISwitch-----------
         self.view.addSubview(uiSwitch)
@@ -104,11 +104,71 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
         }
         //添加文字选项
         segmented.insertSegment(withTitle: "选项四", at: 3, animated: true)
+        //----------UI----------
+        self.view.addSubview(imageView)
+        imageView.snp.makeConstraints { (make) in
+            make.top.equalTo(segmented.snp.bottom).offset(kMargin)
+            make.left.right.equalTo(segmented)
+            make.height.equalTo(kMargin*5)
+        }
+        //----------UIProgressView----------
+        self.view.addSubview(progressView)
+        progressView.snp.makeConstraints { (make) in
+            make.top.equalTo(imageView.snp.bottom).offset(kMargin)
+            make.left.right.equalTo(imageView)
+            make.height.equalTo(kMargin/2)
+        }
+        //延迟执行
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.0) {
+            self.progressView.setProgress(0.6, animated: true)
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.5) {
+            self.progressView.setProgress(0.99, animated: true)
+        }
+        //----------UI----------
         
+        //----------UI----------
+        //----------UI----------
+        //----------UI----------
+        //----------UI----------
+        //----------UI----------
         
-        
-        
+                
     }
+    
+    lazy var progressView: UIProgressView = {
+        let progressView = UIProgressView()
+        progressView.progress = 0.3//默认进度
+        progressView.progressTintColor = .green//已有的进度颜色
+        progressView.trackTintColor = .gray//剩余进度颜色(即进度槽颜色)
+        return progressView
+    }()
+    
+    
+    lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        //异步图片加载
+        DispatchQueue.global().async {
+            do{
+                //定义URL对象
+                let url = URL(string: "http://hangge.com/blog/images/logo.png")
+                //从网络获取数据流
+                let data = try Data(contentsOf: url!)
+                //通过数据流初始化图片
+                let newImage = UIImage(data: data)
+                
+                DispatchQueue.main.async {
+                    imageView.image = newImage
+                    imageView.layer.borderColor = UIColor.red.cgColor
+                    imageView.layer.borderWidth = 2.0
+                    imageView.layer.cornerRadius = 3.0
+                }
+            }catch{
+                print(error)
+            }
+        }
+        return imageView
+    }()
     
     lazy var segmented: UISegmentedControl = {
         //选项除了文字还可以是图片

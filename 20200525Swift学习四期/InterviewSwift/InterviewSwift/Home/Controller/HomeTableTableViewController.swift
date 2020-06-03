@@ -83,6 +83,8 @@ class HomeTableTableViewController: UITableViewController {
             tarVC = FileEditViewController()
         case 4:
             tarVC = UIScrollViewController()
+        case 5:
+            tarVC = TableViewController()
         default:
             tarVC = HomeViewController()
         }
@@ -94,10 +96,12 @@ class HomeTableTableViewController: UITableViewController {
     func initData() {
         data.append(["1.SnapKit框架解析（一） —— SnapKit应用的一个简单示例（一）","https://www.jianshu.com/p/daa3496c9736"])
         data.append(["2.SnapKit框架解析（二） —— SnapKit应用的一个简单示例（二）","​​https://www.jianshu.com/p/0bf8f5d2db95"])
-        data.append(["3.RxSwift中文文档","https://beeth0ven.github.io/RxSwift-Chinese-Documentation/"])
+        data.append(["3.RxSwift中文文档-待进一步学习...","https://beeth0ven.github.io/RxSwift-Chinese-Documentation/"])
         //https://www.hangge.com
         data.append(["18.Swift - 文件，文件夹操作大全","https://www.hangge.com/blog/cache/detail_527.html"])
         data.append(["19.Swift - 使用UIScrollView实现页面滚动切换","https://www.hangge.com/blog/cache/detail_544.html"])
+        data.append(["20.Swift - 使用表格组件（UITableView）实现单列表","https://www.hangge.com/blog/cache/detail_552.html"])
+        
         
         
     }

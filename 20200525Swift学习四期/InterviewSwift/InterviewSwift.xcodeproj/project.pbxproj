@@ -20,6 +20,8 @@
 		5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */; };
 		5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */; };
 		59F6797124876F3800C937BA /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6797024876F3700C937BA /* UIScrollViewController.swift */; };
+		59F67973248771D900C937BA /* SonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F67972248771D900C937BA /* SonViewController.swift */; };
+		59F6797524878F5800C937BA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6797424878F5800C937BA /* TableViewController.swift */; };
 		8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */; };
 		8C96CDC02462A62E00A420F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */; };
 		8C96CDC22462A62E00A420F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDC12462A62E00A420F6 /* ViewController.swift */; };
@@ -64,6 +66,8 @@
 		5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		59F6797024876F3700C937BA /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
+		59F67972248771D900C937BA /* SonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonViewController.swift; sourceTree = "<group>"; };
+		59F6797424878F5800C937BA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8C96CDBA2462A62E00A420F6 /* InterviewSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,14 +139,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		590E7AB62484A4A300600581 /* 20200601基础控件 */ = {
+		590E7AB62484A4A300600581 /* 202006基础控件 */ = {
 			isa = PBXGroup;
 			children = (
 				590E7AB72484A4C600600581 /* UIButtonViewController.swift */,
 				590E7AB92484F40400600581 /* FileEditViewController.swift */,
 				59F6797024876F3700C937BA /* UIScrollViewController.swift */,
+				59F67972248771D900C937BA /* SonViewController.swift */,
+				59F6797424878F5800C937BA /* TableViewController.swift */,
 			);
-			path = "20200601基础控件";
+			path = "202006基础控件";
 			sourceTree = "<group>";
 		};
 		5950A72F247B8F9100CA3BD3 /* Controller */ = {
@@ -248,7 +254,7 @@
 		8C96CDBC2462A62E00A420F6 /* InterviewSwift */ = {
 			isa = PBXGroup;
 			children = (
-				590E7AB62484A4A300600581 /* 20200601基础控件 */,
+				590E7AB62484A4A300600581 /* 202006基础控件 */,
 				5950A73E24809A1500CA3BD3 /* 20200529RxSwift */,
 				5950A737247B91B200CA3BD3 /* Common */,
 				5950A734247B917400CA3BD3 /* Base */,
@@ -479,6 +485,7 @@
 				590E7AB82484A4C600600581 /* UIButtonViewController.swift in Sources */,
 				8C96CDC22462A62E00A420F6 /* ViewController.swift in Sources */,
 				590E7AB12480FC8B00600581 /* Music.swift in Sources */,
+				59F6797524878F5800C937BA /* TableViewController.swift in Sources */,
 				8CFFC15A24639EA700F9D480 /* HomeTableTableViewController.swift in Sources */,
 				8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */,
 				590E7ABA2484F40400600581 /* FileEditViewController.swift in Sources */,
@@ -491,6 +498,7 @@
 				5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */,
 				59F6797124876F3800C937BA /* UIScrollViewController.swift in Sources */,
 				5950A736247B917E00CA3BD3 /* BaseViewController.swift in Sources */,
+				59F67973248771D900C937BA /* SonViewController.swift in Sources */,
 				5950A733247B90E700CA3BD3 /* HomeViewController.swift in Sources */,
 				590E7AB32480FD4D00600581 /* MusicListViewModel.swift in Sources */,
 				8CFFC15D2463A07A00F9D480 /* MomentTableViewCell.swift in Sources */,

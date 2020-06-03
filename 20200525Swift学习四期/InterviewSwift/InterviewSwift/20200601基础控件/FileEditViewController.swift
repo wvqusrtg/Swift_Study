@@ -9,7 +9,7 @@
 import UIKit
 
 //[18.Swift - 文件，文件夹操作大全](https://www.hangge.com/blog/cache/detail_527.html)
-class FileEditViewController: BaseViewController,UITextFieldDelegate {
+class FileEditViewController: BaseViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
 
     lazy var labTitle: UILabel = {
         let labTitle = UILabel()
@@ -146,14 +146,63 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
             make.left.right.equalTo(self.slider)
             make.height.equalTo(kMargin*5)
         }
-        
-        //----------UI----------
+        //----------UIPickerView----------
+        self.view.addSubview(self.pickView)
+        self.pickView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.btnUIAlertController.snp.bottom).offset(kMargin*1.5)
+            make.left.right.equalTo(self.btnUIAlertController)
+            make.height.equalTo(kMargin*10)
+        }
         //----------UI----------
         //----------UI----------
         //----------UI----------
         
                 
     }
+    lazy var pickView: UIPickerView = {
+        let pickView = UIPickerView()
+        pickView.dataSource = self
+        pickView.delegate = self
+        pickView.selectRow(1, inComponent: 0, animated: true)
+        pickView.selectRow(2, inComponent: 1, animated: true)
+        pickView.selectRow(3, inComponent: 2, animated: true)
+        pickView.layer.borderColor = UIColor.red.cgColor
+        pickView.layer.borderWidth = 2.0
+        pickView.layer.cornerRadius = 5.0
+        return pickView
+    }()
+    //如下实现pickView的代理方法
+    //设置选择框的列数为3列，继承与UIPickerViewDataSource协议
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 3
+    }
+    //设置选择框的行数为9行，继承与UIPickerViewDataSource协议
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 9
+    }
+    //设置选择框各选项的内容，继承于UIPickerViewDelegate协议
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(row)+"-"+String(component)
+    }
+    //监测响应选项的选择状态
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //将在滑动停止后触发，并打印出选中列和行索引
+        print("component=\(component),row=\(row)")
+    }
+    //行内容自定义
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel = view as? UILabel
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont.systemFont(ofSize: 13)
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = String(row)+"-"+String(component)
+        pickerLabel?.backgroundColor = RGBColor(r: 0, g: 0, b: 0, alp: 0.5)
+        pickerLabel?.textColor = UIColor.blue
+        return pickerLabel!
+    }
+    
     lazy var btnUIAlertController: UIButton = {
         let btnUIAlertController = UIButton()
         btnUIAlertController.setTitle("UIAlertController", for: .normal)
@@ -168,45 +217,45 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate {
     /// - Parameter alertController: alertController description
     @objc func alertControllerClicked(_ alertContol:UIAlertController) {
         
-//        let alertController = UIAlertController(title: "系统提示", message: "您确定要离开吗？", preferredStyle: .alert)
-//        //let alertController = UIAlertController(title: "系统提示", message: "您确定要离开吗？", preferredStyle: .actionSheet)
-//
-//        alertController.addTextField { (UITextField) in
-//            UITextField.placeholder = "用户名"
-//        }
-//
-//        alertController.addTextField { (UITextField) in
-//            UITextField.placeholder = "密码"
-//            UITextField.isSecureTextEntry = true
-//        }
-//
-//        let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (UIAlertAction) in
-//            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了取消按钮")
-//        }
-//        let okAction = UIAlertAction(title: "确定", style: .default) { (UIAlertAction) in
-//            let login = alertController.textFields!.first!
-//            let pwd = alertController.textFields!.last!
-//
-//            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了确定按钮 login=\(String(describing: login.text)) pwd=\(String(describing: pwd.text))")
-//        }
-//        let otherAction = UIAlertAction(title: "OtherAction", style: .default) { (UIAlertAction) in
-//            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了OtherAction按钮")
-//            //用代码移除提示框
-//            self.presentedViewController?.dismiss(animated: true, completion: nil)
-//        }
-//
-//        alertController.addAction(cancelAction)
-//        alertController.addAction(okAction)
-//        alertController.addAction(otherAction)
-//        self.present(alertController, animated: true, completion: nil)
-                
-        //----------------------------------------------------------------------
-        let alertController = UIAlertController(title: "保存成功", message: "详细信息...", preferredStyle: .alert)
-        self.present(alertController, animated: true, completion: nil)
-        //两秒钟后消失
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.0) {
+        let alertController = UIAlertController(title: "系统提示", message: "您确定要离开吗？", preferredStyle: .alert)
+        //let alertController = UIAlertController(title: "系统提示", message: "您确定要离开吗？", preferredStyle: .actionSheet)
+        
+        alertController.addTextField { (UITextField) in
+            UITextField.placeholder = "用户名"
+        }
+
+        alertController.addTextField { (UITextField) in
+            UITextField.placeholder = "密码"
+            UITextField.isSecureTextEntry = true
+        }
+
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (UIAlertAction) in
+            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了取消按钮")
+        }
+        let okAction = UIAlertAction(title: "确定", style: .default) { (UIAlertAction) in
+            let login = alertController.textFields!.first!
+            let pwd = alertController.textFields!.last!
+
+            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了确定按钮 login=\(String(describing: login.text)) pwd=\(String(describing: pwd.text))")
+        }
+        let otherAction = UIAlertAction(title: "OtherAction", style: .default) { (UIAlertAction) in
+            showTextWithHUD(toView: self.view, textTitle: "温馨提示", textMsg: "您点击了OtherAction按钮")
+            //用代码移除提示框
             self.presentedViewController?.dismiss(animated: true, completion: nil)
         }
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        alertController.addAction(otherAction)
+        self.present(alertController, animated: true, completion: nil)
+                
+        //----------------------------------------------------------------------
+//        let alertController = UIAlertController(title: "保存成功", message: "详细信息...", preferredStyle: .alert)
+//        self.present(alertController, animated: true, completion: nil)
+//        //两秒钟后消失
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.0) {
+//            self.presentedViewController?.dismiss(animated: true, completion: nil)
+//        }
         
         
     }

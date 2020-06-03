@@ -81,6 +81,8 @@ class HomeTableTableViewController: UITableViewController {
             tarVC = RxSwiftViewController()
         case 3:
             tarVC = FileEditViewController()
+        case 4:
+            tarVC = UIScrollViewController()
         default:
             tarVC = HomeViewController()
         }
@@ -95,6 +97,7 @@ class HomeTableTableViewController: UITableViewController {
         data.append(["3.RxSwift中文文档","https://beeth0ven.github.io/RxSwift-Chinese-Documentation/"])
         //https://www.hangge.com
         data.append(["18.Swift - 文件，文件夹操作大全","https://www.hangge.com/blog/cache/detail_527.html"])
+        data.append(["19.Swift - 使用UIScrollView实现页面滚动切换","https://www.hangge.com/blog/cache/detail_544.html"])
         
         
     }

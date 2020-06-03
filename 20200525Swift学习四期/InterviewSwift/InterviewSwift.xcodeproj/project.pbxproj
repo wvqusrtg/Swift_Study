@@ -19,6 +19,7 @@
 		5950A73B247BB48E00CA3BD3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73A247BB48E00CA3BD3 /* Question.swift */; };
 		5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */; };
 		5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */; };
+		59F6797124876F3800C937BA /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6797024876F3700C937BA /* UIScrollViewController.swift */; };
 		8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */; };
 		8C96CDC02462A62E00A420F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */; };
 		8C96CDC22462A62E00A420F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDC12462A62E00A420F6 /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 		5950A73A247BB48E00CA3BD3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		59F6797024876F3700C937BA /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
 		8C96CDBA2462A62E00A420F6 /* InterviewSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				590E7AB72484A4C600600581 /* UIButtonViewController.swift */,
 				590E7AB92484F40400600581 /* FileEditViewController.swift */,
+				59F6797024876F3700C937BA /* UIScrollViewController.swift */,
 			);
 			path = "20200601基础控件";
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				8C96CDEF2462A69F00A420F6 /* SnapkitController.swift in Sources */,
 				5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */,
 				5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */,
+				59F6797124876F3800C937BA /* UIScrollViewController.swift in Sources */,
 				5950A736247B917E00CA3BD3 /* BaseViewController.swift in Sources */,
 				5950A733247B90E700CA3BD3 /* HomeViewController.swift in Sources */,
 				590E7AB32480FD4D00600581 /* MusicListViewModel.swift in Sources */,

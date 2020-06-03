@@ -9,13 +9,14 @@
 import UIKit
 
 //[18.Swift - 文件，文件夹操作大全](https://www.hangge.com/blog/cache/detail_527.html)
-class FileEditViewController: BaseViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+class FileEditViewController: BaseViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIScrollViewDelegate {
 
     lazy var labTitle: UILabel = {
         let labTitle = UILabel()
         labTitle.text = "标题"
         labTitle.shadowColor = .red
         labTitle.shadowOffset = CGSize(width: 1.5, height: 1.5)//阴影偏移量
+        labTitle.backgroundColor = RGBColor(r: 0, g: 0, b: 0, alp: 0.5)
         labTitle.font = CustomFont(font: 30)
         return labTitle
     }()
@@ -153,12 +154,44 @@ class FileEditViewController: BaseViewController,UITextFieldDelegate,UIPickerVie
             make.left.right.equalTo(self.btnUIAlertController)
             make.height.equalTo(kMargin*10)
         }
+        //----------UIScrollView----------
+        self.view.addSubview(self.scrollView)
+        self.scrollView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.pickView.snp.bottom).offset(kMargin*1.5)
+            make.left.right.equalTo(self.pickView)
+            make.bottom.equalTo(self.view.snp_bottomMargin)
+        }
         //----------UI----------
-        //----------UI----------
+        
+        
         //----------UI----------
         
                 
     }
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        let imageView = UIImageView(image: UIImage(named: "SH"))
+        scrollView.contentSize = imageView.bounds.size
+        scrollView.addSubview(imageView)
+        scrollView.delegate = self
+        scrollView.minimumZoomScale = 0.1 //最小比例
+        scrollView.maximumZoomScale = 3 //最大比例
+        return scrollView
+    }()
+    //视图滚动中一直触发
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("x:\(scrollView.contentOffset.x) y:\(scrollView.contentOffset.y)")
+    }
+    //手势放大缩小
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        for subView:AnyObject in scrollView.subviews {
+            if subView.isKind(of: UIImageView.self) {
+                return subView as?UIView
+            }
+        }
+        return nil
+    }
+    
     lazy var pickView: UIPickerView = {
         let pickView = UIPickerView()
         pickView.dataSource = self

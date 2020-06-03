@@ -8,6 +8,8 @@
 
 2020年06月03日 ↓
 
+[36.Swift - 给表格的单元格UITableViewCell添加图片，详细文本标签](https://www.hangge.com/blog/cache/detail_558.html)
+
 [35.Swift - 使用表格组件（UITableView）实现单列表](https://www.hangge.com/blog/cache/detail_552.html)
 
 [34.Swift - 日期选择控件（UIDatePicker）的用法](https://www.hangge.com/blog/cache/detail_547.html)

@@ -38,6 +38,7 @@ class TableGroupViewController: BaseViewController,UITableViewDelegate,UITableVi
         }
     }
     //如果写如下，则上面不起作用(Footer同理)
+    #warning("如果写如下，则上面(titleForHeaderInSection)不起作用(Footer同理)")
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let viewForHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenW, height: 50.0))
         viewForHeaderView.backgroundColor = .purple
@@ -52,6 +53,35 @@ class TableGroupViewController: BaseViewController,UITableViewDelegate,UITableVi
         }
         return viewForHeaderView
     }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 40.0
+        }else{
+            return 40.0
+        }
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let viewForFooterView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenW, height: 50.0))
+        viewForFooterView.backgroundColor = RGBColor(r: 300, g: 100, b: 50, alp: 0.5)
+        let labtitle = UILabel()
+        let data = self.allnames?[section]
+        labtitle.text = "viewForFooterInSection Foo有\(data!.count)个控件"
+        if section == 0 {
+            labtitle.backgroundColor = RGBColor(r: 0, g: 0, b: 0, alp: 0.5)
+        }else{
+            labtitle.backgroundColor = RGBColor(r: 100, g: 100, b: 100, alp: 0.5)
+        }
+        labtitle.textColor = .red
+        viewForFooterView.addSubview(labtitle)
+        labtitle.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.height.equalTo(40.0)
+        }
+        return viewForFooterView
+    }
+    
+    
     // UITableViewDataSource协议中的方法，该方法的返回值决定指定分区的尾部
     func tableView(_ tableView:UITableView, titleForFooterInSection section:Int)->String? {
         let data = self.allnames?[section]
@@ -136,7 +166,32 @@ class TableGroupViewController: BaseViewController,UITableViewDelegate,UITableVi
         headerLabel.lineBreakMode = .byWordWrapping
         headerLabel.text = "高级 UIKit 控件 - HeadView"
         headerLabel.font = UIFont.italicSystemFont(ofSize: 20)
-        self.tableView!.tableHeaderView = headerLabel
+        //头部视图、尾部视图的高度由自定义View控制大小
+        let headView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenW, height: 100))
+        headView.backgroundColor = RGBColor(r: 0, g: 0, b: 0, alp: 0.3)
+        headView.addSubview(headerLabel)
+        headerLabel.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
+        self.tableView!.tableHeaderView = headView
+        
+        //创建表头标签
+        let footerLabel = UILabel(frame: CGRect(x:0, y:0,
+                                        width:self.view.bounds.size.width, height:100))
+        footerLabel.backgroundColor = UIColor.black
+        footerLabel.textColor = UIColor.white
+        footerLabel.numberOfLines = 0
+        footerLabel.textAlignment = .center
+        footerLabel.lineBreakMode = .byWordWrapping
+        footerLabel.text = "高级 UIKit 控件 - FooterView"
+        footerLabel.font = UIFont.italicSystemFont(ofSize: 20)
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenW, height: 100))
+        footerView.backgroundColor = RGBColor(r: 0, g: 0, b: 0, alp: 0.3)
+        footerView.addSubview(footerLabel)
+        footerLabel.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
+        self.tableView!.tableFooterView = footerView
     }
     func initData() {
         //初始化数据，这一次数据，我们放在属性列表文件里
@@ -155,8 +210,8 @@ class TableGroupViewController: BaseViewController,UITableViewDelegate,UITableVi
         print("字典：\(self.allnames! as Any)")
         
         self.adHeaders = [
-            "常见 UIKit 控件-normal",
-            "高级 UIKit 控件-height level"
+            "【viewForHeaderInSection】常见 UIKit 控件-normal",
+            "【viewForHeaderInSection】高级 UIKit 控件-height level"
         ]
     }
     

@@ -86,7 +86,7 @@ class TableViewCell: UITableViewCell {
             y: y + self.msgItem.insets.top, width: width, height: height)
          
         self.addSubview(self.customView)
-         
+        
         //如果是别人的消息，在左边，如果是我输入的消息，在右边
         if (type == ChatType.someone)
         {
@@ -101,6 +101,17 @@ class TableViewCell: UITableViewCell {
         self.bubbleImage.frame = CGRect(x: x, y: y,
             width: width + self.msgItem.insets.left + self.msgItem.insets.right,
             height: height + self.msgItem.insets.top + self.msgItem.insets.bottom)
+        
+        //尝试添加自定义view分割线
+        let viewSep = UIView()
+        viewSep.backgroundColor = RGBColor(r: 0, g: 0, b: 0, alp: 0.3)
+        self.addSubview(viewSep)
+        viewSep.snp.makeConstraints { (make) in
+            make.height.equalTo(1)
+            make.leading.equalTo(self).offset(kMargin)
+            make.trailing.equalToSuperview()
+            make.bottom.equalTo(self.snp.bottom)
+        }
     }
      
     //让单元格宽度始终为屏幕宽

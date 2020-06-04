@@ -19,6 +19,12 @@
 		5950A73B247BB48E00CA3BD3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73A247BB48E00CA3BD3 /* Question.swift */; };
 		5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */; };
 		5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */; };
+		59EB20012488DF1D004AD63B /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB20002488DF1D004AD63B /* DesignViewController.swift */; };
+		59EB20032488E0AE004AD63B /* NIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB20022488E0AE004AD63B /* NIView.swift */; };
+		59EB20052488E9B0004AD63B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB20042488E9B0004AD63B /* CustomViewController.swift */; };
+		59EB20072488E9D2004AD63B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB20062488E9D2004AD63B /* CustomTableViewCell.swift */; };
+		59EB20092488F4EB004AD63B /* Custom2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB20082488F4EB004AD63B /* Custom2ViewController.swift */; };
+		59EB200B2488F544004AD63B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB200A2488F544004AD63B /* MenuTableViewCell.swift */; };
 		59F6797124876F3800C937BA /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6797024876F3700C937BA /* UIScrollViewController.swift */; };
 		59F67973248771D900C937BA /* SonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F67972248771D900C937BA /* SonViewController.swift */; };
 		59F6797524878F5800C937BA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6797424878F5800C937BA /* TableViewController.swift */; };
@@ -71,6 +77,12 @@
 		5950A73A247BB48E00CA3BD3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		59EB20002488DF1D004AD63B /* DesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
+		59EB20022488E0AE004AD63B /* NIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIView.swift; sourceTree = "<group>"; };
+		59EB20042488E9B0004AD63B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		59EB20062488E9D2004AD63B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		59EB20082488F4EB004AD63B /* Custom2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom2ViewController.swift; sourceTree = "<group>"; };
+		59EB200A2488F544004AD63B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		59F6797024876F3700C937BA /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
 		59F67972248771D900C937BA /* SonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonViewController.swift; sourceTree = "<group>"; };
 		59F6797424878F5800C937BA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +175,9 @@
 				59F6797424878F5800C937BA /* TableViewController.swift */,
 				59F679762487998B00C937BA /* TableGroupViewController.swift */,
 				59F67978248888BF00C937BA /* ChatViewController.swift */,
+				59EB20002488DF1D004AD63B /* DesignViewController.swift */,
+				59EB20042488E9B0004AD63B /* CustomViewController.swift */,
+				59EB20082488F4EB004AD63B /* Custom2ViewController.swift */,
 			);
 			path = "202006基础控件";
 			sourceTree = "<group>";
@@ -242,6 +257,9 @@
 			children = (
 				59F6798024888D0100C937BA /* TableViewCell.swift */,
 				59F6798224888DBC00C937BA /* TableView.swift */,
+				59EB20022488E0AE004AD63B /* NIView.swift */,
+				59EB20062488E9D2004AD63B /* CustomTableViewCell.swift */,
+				59EB200A2488F544004AD63B /* MenuTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -522,20 +540,26 @@
 				590E7AB12480FC8B00600581 /* Music.swift in Sources */,
 				59F6797524878F5800C937BA /* TableViewController.swift in Sources */,
 				8CFFC15A24639EA700F9D480 /* HomeTableTableViewController.swift in Sources */,
+				59EB20072488E9D2004AD63B /* CustomTableViewCell.swift in Sources */,
 				59F679772487998B00C937BA /* TableGroupViewController.swift in Sources */,
 				8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */,
 				590E7ABA2484F40400600581 /* FileEditViewController.swift in Sources */,
+				59EB200B2488F544004AD63B /* MenuTableViewCell.swift in Sources */,
+				59EB20032488E0AE004AD63B /* NIView.swift in Sources */,
 				8C96CDC02462A62E00A420F6 /* SceneDelegate.swift in Sources */,
 				59F6797E24888B4000C937BA /* ChatDataSource.swift in Sources */,
 				5950A739247B91BC00CA3BD3 /* Common.swift in Sources */,
 				59F6797C2488895300C937BA /* MessageItem.swift in Sources */,
 				590E7AB52480FDFD00600581 /* MusicViewController.swift in Sources */,
 				5950A73B247BB48E00CA3BD3 /* Question.swift in Sources */,
+				59EB20012488DF1D004AD63B /* DesignViewController.swift in Sources */,
 				8C96CDEF2462A69F00A420F6 /* SnapkitController.swift in Sources */,
 				5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */,
 				5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */,
 				59F6797124876F3800C937BA /* UIScrollViewController.swift in Sources */,
+				59EB20092488F4EB004AD63B /* Custom2ViewController.swift in Sources */,
 				5950A736247B917E00CA3BD3 /* BaseViewController.swift in Sources */,
+				59EB20052488E9B0004AD63B /* CustomViewController.swift in Sources */,
 				59F6798124888D0100C937BA /* TableViewCell.swift in Sources */,
 				59F6798324888DBC00C937BA /* TableView.swift in Sources */,
 				59F67973248771D900C937BA /* SonViewController.swift in Sources */,

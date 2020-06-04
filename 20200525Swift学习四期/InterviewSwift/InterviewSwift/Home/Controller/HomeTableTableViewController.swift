@@ -87,6 +87,8 @@ class HomeTableTableViewController: UITableViewController {
             tarVC = TableViewController()
         case 6:
             tarVC = TableGroupViewController()
+        case 7:
+            tarVC = ChatViewController()
         default:
             tarVC = HomeViewController()
         }
@@ -103,7 +105,9 @@ class HomeTableTableViewController: UITableViewController {
         data.append(["18.Swift - 文件，文件夹操作大全","https://www.hangge.com/blog/cache/detail_527.html"])
         data.append(["19.Swift - 使用UIScrollView实现页面滚动切换","https://www.hangge.com/blog/cache/detail_544.html"])
         data.append(["20.Swift - 使用表格组件（UITableView）实现单列表","https://www.hangge.com/blog/cache/detail_552.html"])
-        data.append(["21.Swift - 使用表格组件（UITableView）实现分组列表","https://www.hangge.com/blog/cache/detail_557.html"])        
+        data.append(["21.Swift - 使用表格组件（UITableView）实现分组列表","https://www.hangge.com/blog/cache/detail_557.html"])
+        data.append(["22.Swift - 自定义单元格实现微信聊天界面","https://www.hangge.com/blog/cache/detail_559.html"])
+        
         
         
         

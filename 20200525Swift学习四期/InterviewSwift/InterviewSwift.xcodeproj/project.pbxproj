@@ -23,6 +23,11 @@
 		59F67973248771D900C937BA /* SonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F67972248771D900C937BA /* SonViewController.swift */; };
 		59F6797524878F5800C937BA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6797424878F5800C937BA /* TableViewController.swift */; };
 		59F679772487998B00C937BA /* TableGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F679762487998B00C937BA /* TableGroupViewController.swift */; };
+		59F67979248888BF00C937BA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F67978248888BF00C937BA /* ChatViewController.swift */; };
+		59F6797C2488895300C937BA /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6797B2488895300C937BA /* MessageItem.swift */; };
+		59F6797E24888B4000C937BA /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6797D24888B4000C937BA /* ChatDataSource.swift */; };
+		59F6798124888D0100C937BA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6798024888D0100C937BA /* TableViewCell.swift */; };
+		59F6798324888DBC00C937BA /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F6798224888DBC00C937BA /* TableView.swift */; };
 		8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */; };
 		8C96CDC02462A62E00A420F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */; };
 		8C96CDC22462A62E00A420F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96CDC12462A62E00A420F6 /* ViewController.swift */; };
@@ -70,6 +75,11 @@
 		59F67972248771D900C937BA /* SonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonViewController.swift; sourceTree = "<group>"; };
 		59F6797424878F5800C937BA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		59F679762487998B00C937BA /* TableGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableGroupViewController.swift; sourceTree = "<group>"; };
+		59F67978248888BF00C937BA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		59F6797B2488895300C937BA /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
+		59F6797D24888B4000C937BA /* ChatDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataSource.swift; sourceTree = "<group>"; };
+		59F6798024888D0100C937BA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		59F6798224888DBC00C937BA /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		8C96CDBA2462A62E00A420F6 /* InterviewSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C96CDBD2462A62E00A420F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C96CDBF2462A62E00A420F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,12 +154,15 @@
 		590E7AB62484A4A300600581 /* 202006基础控件 */ = {
 			isa = PBXGroup;
 			children = (
+				59F6797F24888CBE00C937BA /* view */,
+				59F6797A2488893D00C937BA /* model */,
 				590E7AB72484A4C600600581 /* UIButtonViewController.swift */,
 				590E7AB92484F40400600581 /* FileEditViewController.swift */,
 				59F6797024876F3700C937BA /* UIScrollViewController.swift */,
 				59F67972248771D900C937BA /* SonViewController.swift */,
 				59F6797424878F5800C937BA /* TableViewController.swift */,
 				59F679762487998B00C937BA /* TableGroupViewController.swift */,
+				59F67978248888BF00C937BA /* ChatViewController.swift */,
 			);
 			path = "202006基础控件";
 			sourceTree = "<group>";
@@ -213,6 +226,24 @@
 				5950A732247B90E700CA3BD3 /* HomeViewController.swift */,
 			);
 			path = defaultVC;
+			sourceTree = "<group>";
+		};
+		59F6797A2488893D00C937BA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				59F6797B2488895300C937BA /* MessageItem.swift */,
+				59F6797D24888B4000C937BA /* ChatDataSource.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		59F6797F24888CBE00C937BA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				59F6798024888D0100C937BA /* TableViewCell.swift */,
+				59F6798224888DBC00C937BA /* TableView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		836832A1188685A0A4D2A732 /* Frameworks */ = {
@@ -487,6 +518,7 @@
 			files = (
 				590E7AB82484A4C600600581 /* UIButtonViewController.swift in Sources */,
 				8C96CDC22462A62E00A420F6 /* ViewController.swift in Sources */,
+				59F67979248888BF00C937BA /* ChatViewController.swift in Sources */,
 				590E7AB12480FC8B00600581 /* Music.swift in Sources */,
 				59F6797524878F5800C937BA /* TableViewController.swift in Sources */,
 				8CFFC15A24639EA700F9D480 /* HomeTableTableViewController.swift in Sources */,
@@ -494,7 +526,9 @@
 				8C96CDBE2462A62E00A420F6 /* AppDelegate.swift in Sources */,
 				590E7ABA2484F40400600581 /* FileEditViewController.swift in Sources */,
 				8C96CDC02462A62E00A420F6 /* SceneDelegate.swift in Sources */,
+				59F6797E24888B4000C937BA /* ChatDataSource.swift in Sources */,
 				5950A739247B91BC00CA3BD3 /* Common.swift in Sources */,
+				59F6797C2488895300C937BA /* MessageItem.swift in Sources */,
 				590E7AB52480FDFD00600581 /* MusicViewController.swift in Sources */,
 				5950A73B247BB48E00CA3BD3 /* Question.swift in Sources */,
 				8C96CDEF2462A69F00A420F6 /* SnapkitController.swift in Sources */,
@@ -502,6 +536,8 @@
 				5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */,
 				59F6797124876F3800C937BA /* UIScrollViewController.swift in Sources */,
 				5950A736247B917E00CA3BD3 /* BaseViewController.swift in Sources */,
+				59F6798124888D0100C937BA /* TableViewCell.swift in Sources */,
+				59F6798324888DBC00C937BA /* TableView.swift in Sources */,
 				59F67973248771D900C937BA /* SonViewController.swift in Sources */,
 				5950A733247B90E700CA3BD3 /* HomeViewController.swift in Sources */,
 				590E7AB32480FD4D00600581 /* MusicListViewModel.swift in Sources */,

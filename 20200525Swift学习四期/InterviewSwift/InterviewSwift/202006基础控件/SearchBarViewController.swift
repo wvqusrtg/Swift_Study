@@ -32,6 +32,21 @@ class SearchBarViewController: BaseViewController,UITableViewDelegate,UITableVie
         cell.textLabel?.text = self.ctrlsel[indexPath.row]
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.searchBar.resignFirstResponder()
+    }
+    
+    //searchbar获取焦点
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    //点击取消按钮
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
+        self.tableView.reloadData()
+    }
+    //searchbar文字内容变化
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
         //没有搜索内容时显示全部组件
@@ -48,10 +63,7 @@ class SearchBarViewController: BaseViewController,UITableViewDelegate,UITableVie
         }
         //刷新TableView显示
         self.tableView.reloadData()
-    }
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.tableView.reloadData()
-    }
+    }    
     // 搜索代理UISearchBarDelegate方法，点击虚拟键盘上的Search按钮时触发
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
@@ -71,6 +83,7 @@ class SearchBarViewController: BaseViewController,UITableViewDelegate,UITableVie
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+    //懒加载控件
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: kScreenW, height: kMargin*5))
         //searchBar.showsCancelButton = true

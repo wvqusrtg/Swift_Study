@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableGroupViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
+class TableGroupViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate {
     var tableView:UITableView?
     var allnames:Dictionary<Int,[String]>?
     var adHeaders:[String]?
@@ -192,6 +192,84 @@ class TableGroupViewController: BaseViewController,UITableViewDelegate,UITableVi
             make.center.equalToSuperview()
         }
         self.tableView!.tableFooterView = footerView
+        
+        //绑定对长按的响应
+        let longPress = UILongPressGestureRecognizer(target:self,
+                          action:#selector(tableviewCellLongPressed(_:)))
+        //代理
+        longPress.delegate = self
+        longPress.minimumPressDuration = 1.0
+        //将长按手势添加到需要实现长按操作的视图里
+        self.tableView!.addGestureRecognizer(longPress)
+    }
+    //单元格长按事件响应
+    @objc func tableviewCellLongPressed(_ gestureRecognizer:UILongPressGestureRecognizer)
+    {
+        if (gestureRecognizer.state == UIGestureRecognizer.State.began)
+        {
+            print("UIGestureRecognizerStateBegan");
+        }
+        if (gestureRecognizer.state == UIGestureRecognizer.State.changed)
+        {
+            print("UIGestureRecognizerStateChanged");
+        }
+         
+        if (gestureRecognizer.state == UIGestureRecognizer.State.ended)
+        {
+            print("UIGestureRecognizerStateEnded");
+            //在正常状态和编辑状态之间切换
+            if(self.tableView!.isEditing == false)
+            {
+                showTextWithHUD(toView: self.view, textTitle: "进入编辑状态", textMsg: nil, afterDelay: 1.0)
+                self.tableView!.setEditing(true, animated:true)
+            }
+            else
+            {
+                showTextWithHUD(toView: self.view, textTitle: "关闭进入编辑状态", textMsg: nil, afterDelay: 1.0)
+                self.tableView!.setEditing(false, animated:true)
+            }
+        }
+    }
+    //设置单元格的编辑的样式
+    func tableView(_ tableView: UITableView,
+                   editingStyleForRowAt indexPath: IndexPath)
+        -> UITableViewCell.EditingStyle {
+            if(self.tableView!.isEditing == false)
+            {
+                return UITableViewCell.EditingStyle.delete
+            }
+            else
+            {
+                return UITableViewCell.EditingStyle.insert
+            }
+    }
+     
+    //设置确认删除按钮的文字
+    func tableView(_ tableView: UITableView,
+                   titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+            var data = self.allnames?[indexPath.section]!
+             
+            let itemString = data![indexPath.row] as String
+            return "确定删除\(itemString)？"
+    }
+     
+    //单元格编辑后（删除或插入）的响应方法
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCell.EditingStyle.delete)
+        {
+            self.allnames?[indexPath.section]?.remove(at: indexPath.row)
+            self.tableView!.reloadData()
+            print("你确认了删除按钮")
+        }
+        else if(editingStyle == UITableViewCell.EditingStyle.insert)
+        {
+            self.allnames?[indexPath.section]?.insert("插入一项新的",
+                                                      at: indexPath.row+1)
+            print("你按下了插入按钮")
+            self.tableView!.reloadData()
+        }
     }
     func initData() {
         //初始化数据，这一次数据，我们放在属性列表文件里

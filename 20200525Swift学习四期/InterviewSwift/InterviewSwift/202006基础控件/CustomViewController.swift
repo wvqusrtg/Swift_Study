@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class CustomViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
     let cell_identifier:String = "CustomCell"
@@ -48,7 +49,17 @@ class CustomViewController: BaseViewController,UITableViewDelegate,UITableViewDa
     ///   - indexPath: indexPath description
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.navigationController?.pushViewController(Custom2ViewController(), animated: true)        
+        //self.navigationController?.pushViewController(Custom2ViewController(), animated: true)
+        
+//        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+//        hud.label.text = "这是默认带菊花的提示"
+//        //背景渐变
+//        hud.dimBackground = true
+//        //延迟隐藏
+//        hud.hide(animated: true, afterDelay: 0.8)
+        
+        //如下是封装好的
+        showTextWithHUD(toView: self.view, textTitle: "indexPath[Section:\(indexPath.section),Row:\(indexPath.row)]", textMsg: nil,afterDelay: 1.0)
     }
     
     /*

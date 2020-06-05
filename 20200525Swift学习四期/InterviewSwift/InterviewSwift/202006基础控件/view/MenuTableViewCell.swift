@@ -9,9 +9,9 @@
 import UIKit
 
 class MenuTableViewCell: UITableViewCell {
-    var showImage   : UIImageView?
-    var firstTitle  : UILabel?
-    var subTitle    : UILabel?
+    var showImage:UIImageView?
+    var firstTitle:UILabel?
+    var subTitle:UILabel?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -19,16 +19,17 @@ class MenuTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = UITableViewCell.SelectionStyle.none
         setUpUI()
     }
     
     func setUpUI() {
         showImage = UIImageView()
         showImage!.layer.masksToBounds = true
-        self.addSubview(showImage!)
+        self.contentView.addSubview(showImage!)
         showImage?.snp.makeConstraints({ (make) in
-            make.top.equalToSuperview().offset(kMargin)
-            make.left.equalToSuperview().offset(kMargin)
+            make.top.equalTo(self.contentView.snp.top).offset(kMargin)
+            make.left.equalTo(self.contentView.snp.left).offset(kMargin)
             make.width.equalTo(kScreenW-20)
             make.height.equalTo(170)
         })
@@ -37,7 +38,7 @@ class MenuTableViewCell: UITableViewCell {
         subTitle?.font = UIFont.systemFont(ofSize: 15)
         subTitle?.textAlignment = NSTextAlignment.center
         subTitle?.textColor = UIColor.red
-        self.addSubview(subTitle!)
+        self.contentView.addSubview(subTitle!)
         subTitle?.snp.makeConstraints({ (make) in
             make.left.width.equalTo(showImage!)
             make.top.equalTo(showImage!.snp.bottom).offset(38)
@@ -48,15 +49,21 @@ class MenuTableViewCell: UITableViewCell {
         firstTitle?.font = UIFont.systemFont(ofSize: 18)
         firstTitle?.textAlignment = NSTextAlignment.center
         firstTitle?.textColor = UIColor.blue
-        self.addSubview(firstTitle!)
+        self.contentView.addSubview(firstTitle!)
         firstTitle?.snp.makeConstraints({ (make) in
             make.top.equalTo(subTitle!.snp.bottom).offset(38)
             make.left.equalTo(subTitle!)
             make.height.equalTo(30)
         })
+        
     }
 
-    func setValueForCell(dic: NSDictionary) {
+    open func setValueForCell(dic: NSDictionary) {
+        subTitle!.text = "45道菜谱"
+        firstTitle!.text = "世界各地大排档的招牌美食"
+        showImage!.image = UIImage(named: "coder")
+    }
+    open func setValueForCell() {
         subTitle!.text = "45道菜谱"
         firstTitle!.text = "世界各地大排档的招牌美食"
         showImage!.image = UIImage(named: "coder")

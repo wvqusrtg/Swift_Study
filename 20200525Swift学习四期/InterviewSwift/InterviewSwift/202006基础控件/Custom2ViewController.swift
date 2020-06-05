@@ -34,7 +34,7 @@ class Custom2ViewController: BaseViewController,UITableViewDelegate, UITableView
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "mainCell"
-        let cell = MenuTableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: identifier)
+        let cell = MenuTableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifier)
         //下面两个属性对应subtitle
         //        cell.firstTitle?.text = mainArray![indexPath.row] as? String
         //        cell.subTitle?.text = mainArray![indexPath.row] as? String

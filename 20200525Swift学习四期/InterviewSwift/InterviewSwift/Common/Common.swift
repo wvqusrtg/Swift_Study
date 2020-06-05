@@ -8,6 +8,11 @@
 
 import UIKit
 import SnapKit
+/**
+ 三方引入(目前理解-by:nixs)
+    如果是Cocoapods引入，这里可以直接 import XXX导入目标库，
+    如果是手动引入的就需要桥接文件了
+ */
 import MBProgressHUD
 import RxSwift
 import RxCocoa
@@ -74,7 +79,7 @@ func showTextWithHUD(toView:UIView,textTitle:String?,textMsg:String?,afterDelay:
     let hud = MBProgressHUD.showAdded(to: toView, animated: true)
     hud.mode = MBProgressHUDMode.text
     hud.label.text = textTitle
-    hud.detailsLabel.text = textMsg
+    hud.detailsLabel.text = textMsg    
     //延迟隐藏
     hud.hide(animated: true, afterDelay: afterDelay)
 }

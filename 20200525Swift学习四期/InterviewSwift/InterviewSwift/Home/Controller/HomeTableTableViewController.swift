@@ -93,6 +93,8 @@ class HomeTableTableViewController: UITableViewController {
             tarVC = DesignViewController()
         case 9:
             tarVC = CustomViewController()
+        case 10:
+            tarVC = SearchBarViewController()
         default:
             tarVC = HomeViewController()
         }
@@ -113,6 +115,7 @@ class HomeTableTableViewController: UITableViewController {
         data.append(["22.Swift - 自定义单元格实现微信聊天界面","https://www.hangge.com/blog/cache/detail_559.html"])
         data.append(["23.Swift - 自定义View","https://www.jianshu.com/p/94fb0c2bd144"])
         data.append(["24.Swift纯代码自定义UITableViewCell —— Swift","https://www.cnblogs.com/Rong-Shengcom/p/9309553.html"])
+        data.append(["25.Swift - 搜索条（UISearchBar）的用法","https://www.hangge.com/blog/cache/detail_562.html"])
         
         
         

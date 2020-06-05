@@ -19,6 +19,7 @@
 		5950A73B247BB48E00CA3BD3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73A247BB48E00CA3BD3 /* Question.swift */; };
 		5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */; };
 		5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */; };
+		59B11AF0248A3B1E0047FDC5 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B11AEF248A3B1E0047FDC5 /* SearchBarViewController.swift */; };
 		59EB20012488DF1D004AD63B /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB20002488DF1D004AD63B /* DesignViewController.swift */; };
 		59EB20032488E0AE004AD63B /* NIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB20022488E0AE004AD63B /* NIView.swift */; };
 		59EB20052488E9B0004AD63B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB20042488E9B0004AD63B /* CustomViewController.swift */; };
@@ -77,12 +78,14 @@
 		5950A73A247BB48E00CA3BD3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5950A73C247BB50A00CA3BD3 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		5950A73F24809A2B00CA3BD3 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		59B11AEF248A3B1E0047FDC5 /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
 		59EB20002488DF1D004AD63B /* DesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
 		59EB20022488E0AE004AD63B /* NIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIView.swift; sourceTree = "<group>"; };
 		59EB20042488E9B0004AD63B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		59EB20062488E9D2004AD63B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		59EB20082488F4EB004AD63B /* Custom2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom2ViewController.swift; sourceTree = "<group>"; };
 		59EB200A2488F544004AD63B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		59EB200C24891A9B004AD63B /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		59F6797024876F3700C937BA /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
 		59F67972248771D900C937BA /* SonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonViewController.swift; sourceTree = "<group>"; };
 		59F6797424878F5800C937BA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 				59EB20002488DF1D004AD63B /* DesignViewController.swift */,
 				59EB20042488E9B0004AD63B /* CustomViewController.swift */,
 				59EB20082488F4EB004AD63B /* Custom2ViewController.swift */,
+				59B11AEF248A3B1E0047FDC5 /* SearchBarViewController.swift */,
 			);
 			path = "202006基础控件";
 			sourceTree = "<group>";
@@ -284,6 +288,7 @@
 		8C96CDB12462A62E00A420F6 = {
 			isa = PBXGroup;
 			children = (
+				59EB200C24891A9B004AD63B /* Bridging-Header.h */,
 				8C96CDBC2462A62E00A420F6 /* InterviewSwift */,
 				8C96CDD32462A63100A420F6 /* InterviewSwiftTests */,
 				8C96CDDE2462A63100A420F6 /* InterviewSwiftUITests */,
@@ -557,6 +562,7 @@
 				5950A73D247BB50A00CA3BD3 /* QuizViewController.swift in Sources */,
 				5950A74024809A2B00CA3BD3 /* RxSwiftViewController.swift in Sources */,
 				59F6797124876F3800C937BA /* UIScrollViewController.swift in Sources */,
+				59B11AF0248A3B1E0047FDC5 /* SearchBarViewController.swift in Sources */,
 				59EB20092488F4EB004AD63B /* Custom2ViewController.swift in Sources */,
 				5950A736247B917E00CA3BD3 /* BaseViewController.swift in Sources */,
 				59EB20052488E9B0004AD63B /* CustomViewController.swift in Sources */,
@@ -751,6 +757,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nixs.InterviewSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -773,6 +780,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nixs.InterviewSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

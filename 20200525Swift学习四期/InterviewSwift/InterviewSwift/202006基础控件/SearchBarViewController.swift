@@ -34,6 +34,8 @@ class SearchBarViewController: BaseViewController,UITableViewDelegate,UITableVie
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.searchBar.resignFirstResponder()
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        showTextWithHUD(toView: self.view, textTitle: "[section=\(indexPath.section),row=\(indexPath.row)]", textMsg: nil ,afterDelay: 1.0)
     }
     
     //searchbar获取焦点
@@ -63,10 +65,12 @@ class SearchBarViewController: BaseViewController,UITableViewDelegate,UITableVie
         }
         //刷新TableView显示
         self.tableView.reloadData()
-    }    
+    }
     // 搜索代理UISearchBarDelegate方法，点击虚拟键盘上的Search按钮时触发
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(true, animated: true)
+        self.tableView.reloadData()
     }
     func initViewData() {
         // 起始加载全部内容

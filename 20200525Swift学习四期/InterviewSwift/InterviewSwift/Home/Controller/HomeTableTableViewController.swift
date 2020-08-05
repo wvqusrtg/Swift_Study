@@ -28,7 +28,7 @@ class HomeTableTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -118,7 +118,7 @@ class HomeTableTableViewController: UITableViewController {
         data.append(["23.Swift - 自定义View","https://www.jianshu.com/p/94fb0c2bd144"])
         data.append(["24.Swift纯代码自定义UITableViewCell —— Swift","https://www.cnblogs.com/Rong-Shengcom/p/9309553.html"])
         data.append(["25.Swift - 搜索条（UISearchBar）的用法","https://www.hangge.com/blog/cache/detail_562.html"])
-        data.append(["26.Swift delegate 和 block 使用","https://www.jianshu.com/p/951da96c8647"])
+        data.append(["26.Swift - delegate 和 block 使用","https://www.jianshu.com/p/951da96c8647"])
         
         
         
